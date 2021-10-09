@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<!--
+Exercícios:
+
+1. Crie uma página HTML que, além das tags 'básicas' criadas na aula anterior, possua:
+    a. Formatação de textos(por exemplo: "b", "strong", "i", entre outros);
+    b. Adicione cores aos seus textos utilizando o atributo "style";
+    c. Crie textos 'clicáveis' que, ao ser clicado, redirecione para uma outra página utilizando 
+     a tag "a";
+    d. Crie imagens que, ao serem clicados, apresentem o comportamento de abrir uma imagem em uma
+     nova aba do navegador(dica: utilize o atributo "target" da tag "a");
+    e. Crie uma tabela de no mínimo 4 linhas e 3 colunas utilizando a tag "table";
+    f. Adicione um comentário no seu arquivo HTML que não será exibido ao usuário;
+
+2. Salve os arquivos, teste na ferramenta JsFiddle e publique no seu repositório git.  
+
+-->
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Exercícios da aula sobre HTML no Alpha EdTech, dia 01-10-21.
+    </title>
+</head>
+
+<body>
+
+    <h1 style="text-align:center">
+        35 anos de evolução: conheça a história do
+        <a href="https://pt.wikipedia.org/wiki/Microsoft_Windows" target="_blank">
+            <color style="color: blue;">Windows</color>
+        </a>
+    </h1>
+    <p style="text-align: justify;">
+        35 anos atrás a <b>Microsoft</b>, até então mais conhecida pelo sistema operacional usado no
+        IBM PC e compatíveis, o <b>MS-DOS</b>, lançou um produto chamado <strong>Windows</strong>. Seu
+        objetivo era facilitar o uso do computador graças a um conceito e ferramenta revolucionários:
+        a inteface gráfica e o mouse. Em vez de memorizar e digitar comandos complexos, bastava apontar
+        para opções na tela.
+    </p>
+    <p style="text-align: justify;">
+        Não foi um sucesso imediato, mas ao longo de vários anos e múltiplas versões o sistema foi
+        crescendo e conquistando espaço, até dominar completamente a computação pessoal. Não faltam
+        alternativas, como o
+        <a href="https://pt.wikipedia.org/wiki/Linux" target="_blank"><b><i>Linux</i></b></a>
+        e
+        <a href="https://pt.wikipedia.org/wiki/MacOS" target="_blank"><b><i>MacOS</i></b></a>
+        , mas para muitas pessoas o <b>Windows</b> é
+        sinônimo de “PC”, e é inconvebível que um possa existir sem o outro.
+    </p>
+    <p style="text-align: justify;">
+        Vale notar que vamos falar apenas das versões para computadores domésticos. Existe toda uma
+        outra linha do tempo para o <b>Windows NT</b>, voltado para o mercado corporativo, além do
+        <b>Windows Server</b>, para servidores. Isso sem falar nos sistemas operacionais para dispositivos
+        móveis, como o <b>Windows CE</b> e <b>Windows Phone</b>.
+    </p>
+    <h2 style="text-align: center;">Windows 1.0 (1985)</h2>
+    <p style="text-align: center; float: right; padding-left: 5px; padding-top: 0px;">
+        <a href="https://olhardigital.com.br/uploads/acervo_imagens/2014/04/20140410161341.jpg" target="_blank">
+            <img src="https://olhardigital.com.br/uploads/acervo_imagens/2014/04/20140410161341.jpg" alt="windows 1.0"
+                class="center" width="300px" />
+        </a>
+    </p>
+    <p style="text-align: justify;">
+        Lançado em 20 de novembro de 1985, o <a href="https://pt.wikipedia.org/wiki/Windows_1.x"
+            target="_blank"><b>Windows 1.0</b></a> foi o começo de tudo. O
+        software era uma interface gráfica (e não um sistema operacional) que rodava
+        sobre o <a href="https://pt.wikipedia.org/wiki/MS-DOS" target="_blank"><b>MS-DOS</b></a>, e não tinha um
+        “desktop” como conhecemos hoje: o principal
+        elemento da interface era um gerenciador de arquivos. Vinha com apps como o
+        Paint, calculadora, agenda, editor de texto (o Write) um jogo simples, o Reversi.
+    </p>
+    <p>
+        Era possível ver vários aplicativos na tela ao mesmo tempo, divindindo-a meio a meio como no
+        Android, algo revolucionário na época. Os apps abertos eram representados por ícones no rodapé
+        da tela, o que lembra uma versão rudimentar da barra de tarefas do <b>Windows 10</b>.
+    </p>
+    <p>
+        A primeira versão do <b>Windows</b> não foi popular. Ela foi apenas uma das muitas interfaces
+        gráficas para o PC que surgiram após o lançamento do <b>Macintosh</b>, da Apple. Uma das principais
+        críticas era que o sistema era “pesado”, exigindo no mínimo um PC XT com dois drives de disquetes
+        e 192 kB (sim, quilobytes!) para rodar, com 256 ou 512 kB sendo o recomendado, além de um mouse
+        e uma placa de vídeo com modo gráfico.
+    </p>
+
+    <h3 style="text-align: center;">Principais versões do Windows</h3>
+    <p style="text-align: center;">Existem muitas outras versões mas a tabela abaixo representa apenas as principais:
+    </p>
+    <p style="float: left;padding-left: 120px;">
+        <img src="https://external-preview.redd.it/T_hWgYT9I2O97eWqK-rWGhdPqWw7t1a8fOKNqPJ7Ht4.jpg?auto=webp&s=aade048a5674946a3f1ecd6a842c9acea97ebaa6"
+            width="230px" />
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: cadetblue;">VERSÃO</th>
+                <th style="background-color: cadetblue;">LANÇAMENTO</th>
+                <th style="background-color: cadetblue;">IMAGEM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_3.x" target="_blank">3.X</a></td>
+                <td>1990</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/1/15/Windows_3.0_workspace.png" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/1/15/Windows_3.0_workspace.png/200px-Windows_3.0_workspace.png"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_95" target="_blank">Windows 95</a></td>
+                <td>1995</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/9/90/Am_windows95_desktop.png" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Am_windows95_desktop.png/220px-Am_windows95_desktop.png"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_98" target="_blank">Windows 98</a></td>
+                <td>1998</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/0/00/Windows98.png" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/0/00/Windows98.png/220px-Windows98.png"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_XP" target="_blank">Windows XP</a></td>
+                <td>2001</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/8/8f/Windows_XP_SP3.png" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/8/8f/Windows_XP_SP3.png/220px-Windows_XP_SP3.png"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_Vista" target="_blank">Windows Vista</a></td>
+                <td>2005</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/a/a3/Windows_Vista.png" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/a/a3/Windows_Vista.png/220px-Windows_Vista.png"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_7" target="_blank">Windows 7</a></td>
+                <td>2009</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/8/89/Ambiente_Windows_7.png" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/8/89/Ambiente_Windows_7.png/220px-Ambiente_Windows_7.png"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_8" target="_blank">Windows 8</a></td>
+                <td>2012</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/0/00/Ecr%C3%A3_Inicial_do_Windows_8.png"
+                        target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/0/00/Ecr%C3%A3_Inicial_do_Windows_8.png/220px-Ecr%C3%A3_Inicial_do_Windows_8.png"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_10" target="_blank">Windows 10</a></td>
+                <td>2015</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/3/38/Windows_10_interface.jpg" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/3/38/Windows_10_interface.jpg/220px-Windows_10_interface.jpg"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Windows_11" target="_blank">Windows 11</a></td>
+                <td>2021</td>
+                <td><a href="https://upload.wikimedia.org/wikipedia/pt/4/45/Windows-11.jpg" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/4/45/Windows-11.jpg/220px-Windows-11.jpg"
+                            alt="windows 1.0" class="center" width="200px" />
+                    </a></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h4 style="text-align: center;">
+        Todas as Referências utilizadas foram retiradas do site
+        <a href="http://www.wikipedia.com" target="_blank">wikipedia</a>
+    </h4>
+
+
+</body>
+
+<style>
+    p {
+        text-indent: 3ch;
+        text-align: justify;
+    }
+
+    table,
+    th,
+    td {
+        background-color: #b0d6f0;
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 600px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+        padding: 5px;
+    }
+</style>
+
+</html>
