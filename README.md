@@ -20,7 +20,7 @@
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ayoline&layout=compact)](https://github.com/ayoline/ayoline.github.io)
 
-[![wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ayoline&layout=compact)](https://github.com/ayoline/ayoline.github.io)
+[![wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ayoline&layout=compact)](https://wakatime.com/@b5a60b2c-4302-4698-a232-2e6cf19ddd4e)
 
 ![Ayoline's GitHub stats](https://github-readme-stats.vercel.app/api?username=ayoline&hide=issues&show_icons=true)
 
