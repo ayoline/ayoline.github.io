@@ -18,9 +18,9 @@
 
 ## My stats:
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ayoline&layout=compact)](https://github.com/ayoline/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ayoline&layout=compact)](https://github.com/ayoline/ayoline.github.io)
 
-[![ayoline's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ayoline&layout=compact)](https://github.com/ayoline/github-readme-stats)
+[![ayoline's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ayoline&layout=compact)](https://github.com/ayoline/ayoline.github.io)
 
 ![Ayoline's GitHub stats](https://github-readme-stats.vercel.app/api?username=ayoline&hide=issues&show_icons=true)
 
