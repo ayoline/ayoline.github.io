@@ -37,8 +37,3 @@
     <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" />
     <img align="center" alt="Windows" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" />
 </div>
-
-
-devicon/icons/
-devicon/icons/flutter/flutter-original.svg
-devicon/icons/windows8/windows8-original.svg
