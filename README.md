@@ -14,6 +14,7 @@
         <tr>
         <td>5</td>
         <td>3</td>
+        <td>ES6</td>
     </tr>
 </table>
 
