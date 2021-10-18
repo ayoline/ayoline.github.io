@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html style="background-color: #02635c; color: white;">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anderson P. Soares - Website" />
+    <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
+    <meta property="og:description" content="Página dos Exercícios relativos a aula 15-10-21" />
+    <meta property="og:image" content="https://ayoline.github.io/images/logoAlpha.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="Imagem do logo do GitPages" />
+
+    <style>
+        #dbImage {
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<!--
+    1 . Elabore um desenho ‘bonito’ e exiba dentro de um conteúdo canvas. Exiba o resultado 
+    visual e código escrito que descreve o seu uso.
+-->
+
+<body>
+    <h1>Aula 15-10-21</h1>
+    <h3>Animação feita usando Canvas!</h3>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="contentContainer">
+        <img id="dbImage" src="../../images/dragonball1.png">
+    </div>
+
+    <script>
+        let dbImage = document.getElementById("dbImage");
+        let canvas = document.getElementById("canvas");
+        let context = canvas.getContext("2d");
+
+        var window_height = window.innerHeight;
+        var window_width = window.innerWidth;
+
+        canvas.width = window_width;
+        canvas.height = window_height;
+        canvas.style.background = "#02635c";
+
+
+        let xPos = 0;
+        let yPos = 0;
+        let dx = 2;
+        let dy = 2;
+        let hit_counter = 0;
+
+        function updateDB() {
+            console.log(hit_counter);
+
+            context.clearRect(0, 0, window_width, window_height);
+
+            if ((xPos + 100) > canvas.width) {
+                dx = -dx;
+                hit_counter++;
+            }
+
+            if (xPos < 0) {
+                dx = -dx;
+                hit_counter++;
+            }
+
+            if ((yPos + 200) > canvas.height) {
+                dy = -dy;
+                hit_counter++;
+            }
+
+            if (yPos < 0) {
+                dy = -dy;
+                hit_counter++;
+            }
+
+            xPos += dx;
+            yPos += dy;
+            dbImage.style.transform = 'translate(' + xPos.toString() + 'px, ' + yPos.toString() + 'px)';
+
+            requestAnimationFrame(updateDB);
+
+        }
+        updateDB();
+
+    </script>
+
+</body>
+
+
+
+</html>
