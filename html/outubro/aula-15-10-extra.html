@@ -24,6 +24,14 @@
             width: 100px;
             height: 100px;
         }
+
+        #all7 {
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            width: 500px;
+            height: 500px;
+        }
     </style>
 
 </head>
@@ -41,6 +49,7 @@
 
     <div id="contentContainer">
         <img id="dbImage" src="../../images/dragonball1.png">
+        <img id="all7" src="../../images/all7.png">
     </div>
 
     <script>
@@ -55,36 +64,53 @@
         canvas.height = window_height;
         canvas.style.background = "#02635c";
 
+        let all7 = document.getElementById("all7");
+        //all7.style.visibility = "hidden";
+        all7.style.transform = 'translate(' + canvas.width.toString() + 'px, ' + canvas.height.toString() + 'px)';
 
         let xPos = 0;
         let yPos = 0;
         let dx = 2;
         let dy = 2;
-        let hit_counter = 0;
+        let hit_counter = 1;
+
+        function updateImage() {
+
+            hit_counter++;
+            var n = hit_counter;
+            if (n >= 2 && n <= 7) {
+                document.getElementById("dbImage").src = "../../images/dragonball" + n.toString() + ".png";
+            } else if (n == 8) {
+                dbImage.style.visibility = "hidden";
+                all7.style.visibility = "visible";
+            }
+
+        }
 
         function updateDB() {
+
             console.log(hit_counter);
 
             context.clearRect(0, 0, window_width, window_height);
 
             if ((xPos + 100) > canvas.width) {
                 dx = -dx;
-                hit_counter++;
+                updateImage();
             }
 
             if (xPos < 0) {
                 dx = -dx;
-                hit_counter++;
+                updateImage();
             }
 
             if ((yPos + 200) > canvas.height) {
                 dy = -dy;
-                hit_counter++;
+                updateImage();
             }
 
             if (yPos < 0) {
                 dy = -dy;
-                hit_counter++;
+                updateImage();
             }
 
             xPos += dx;
