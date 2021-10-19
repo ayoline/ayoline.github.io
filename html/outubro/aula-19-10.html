@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anderson P. Soares - Website" />
+    <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
+    <meta property="og:description" content="Página dos Exercícios relativos a aula 19-10-21" />
+    <meta property="og:image" content="https://ayoline.github.io/images/logoAlpha.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="Imagem do logo do GitPages" />
+
+    <style>
+        html {
+            background-color: #02635c;
+            color: white;
+            text-justify: auto;
+        }
+
+        span {
+            background-color: white;
+            color: #02635c;
+        }
+
+        #teste1 {
+
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        .teste2 {
+            color: gray;
+            text-decoration: overline;
+        }
+
+        a[href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors"] {
+            color: blue;
+            text-decoration: double;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        a:hover {
+            color: red;
+            font-weight: lighter;
+            font-size: large;
+        }
+
+        h3::first-letter {
+            background-color: white;
+            color: #02635c;
+        }
+
+        div>h1 {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<!--
+    2. Crie uma página web que demonstre a utilização de seletores CSS em elementos HTML.
+    Deve conter seletores para “id” e “class” bem como demonstrar o uso de seletores em atributos, 
+    pseudo-classes e pseudo-elementos bem como o uso de “combinators”.
+    
+    Mostre o código e o resultado obtido.
+
+-->
+
+<body>
+    <h1><span>Exercício: 19-10-21</span></h1>
+
+    <p id="teste1">Formatação usando o Seletor "id"</p><br />
+
+    <p class="teste2">Formatação usando o Seletor "class"</p><br />
+
+    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">
+        Formatação usando o Seletor de "atributo"</a><br /><br />
+    <div>
+        <a href="https://developer.mozilla.org" target="_blank">
+            Formatação usando o Seletor de "pseudo-classes"</a>
+
+        <h3>Formatação usando o Seletor de "pseudo-elementos"</h3>
+
+        <h1>Formatação usando o Seletor "Combinators"</h1>
+    </div>
+</body>
+
+</html>
