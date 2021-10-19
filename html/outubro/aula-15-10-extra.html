@@ -9,7 +9,7 @@
     <meta property="og:title" content="Anderson P. Soares - Website" />
     <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
     <meta property="og:description" content="Página dos Exercícios relativos a aula 15-10-21" />
-    <meta property="og:image" content="https://ayoline.github.io/images/logoAlpha.jpg" />
+    <meta property="og:image" content="https://ayoline.github.io/images/all7.png" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="300" />
@@ -27,10 +27,23 @@
 
         #all7 {
             position: absolute;
-            top: 200px;
-            left: 300px;
+            top: 30%;
+            left: 40%;
+            width: 300px;
+            height: 300px;
+        }
+
+        #shenlong {
+            position: absolute;
+            top: 5%;
+            left: 35%;
             width: 500px;
-            height: 500px;
+            height: 600px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
         }
     </style>
 
@@ -50,29 +63,36 @@
     <div id="contentContainer">
         <img id="dbImage" src="../../images/dragonball1.png">
         <img id="all7" src="../../images/all7.png">
+        <img id="shenlong" src="../../images/shenlong.png">
     </div>
 
     <script>
-        let dbImage = document.getElementById("dbImage");
-        let canvas = document.getElementById("canvas");
-        let context = canvas.getContext("2d");
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
 
-        var window_height = window.innerHeight;
-        var window_width = window.innerWidth;
+        var inner_width = window.innerWidth;
+        var inner_Height = window.innerHeight;
+        canvas.width = inner_width;
+        canvas.height = inner_Height;
 
-        canvas.width = window_width;
-        canvas.height = window_height;
         canvas.style.background = "#02635c";
 
-        let all7 = document.getElementById("all7");
-        //all7.style.visibility = "hidden";
-        all7.style.transform = 'translate(' + canvas.width.toString() + 'px, ' + canvas.height.toString() + 'px)';
+        var shenlong = document.getElementById("shenlong");
+        shenlong.style.visibility = "hidden";
+        var all7 = document.getElementById("all7");
+        all7.style.visibility = "hidden";
+        var dbImage = document.getElementById("dbImage");
 
-        let xPos = 0;
-        let yPos = 0;
-        let dx = 2;
-        let dy = 2;
-        let hit_counter = 1;
+        //all7.style.visibility = "hidden";
+        //all7.style.transform = 'translate(' + canvas.width.toString() + 'px, ' + canvas.height.toString() + 'px)';
+
+        var xPos = 0;
+        var yPos = 0;
+        var dx = 2;
+        var dy = 2;
+        var hit_counter = 1;
+        var mover = 0;
+        var speed = 1;
 
         function updateImage() {
 
@@ -83,15 +103,27 @@
             } else if (n == 8) {
                 dbImage.style.visibility = "hidden";
                 all7.style.visibility = "visible";
+                rotateDB();
             }
 
+        }
+
+        function rotateDB() {
+            var rotating = "rotate(" + mover.toString() + "deg)";
+            all7.style.transform = rotating;
+            mover += speed;
+            if (mover > 360) {
+                all7.style.visibility = "hidden";
+                shenlong.style.visibility = "visible";
+            }
+            requestAnimationFrame(rotateDB);
         }
 
         function updateDB() {
 
             console.log(hit_counter);
 
-            context.clearRect(0, 0, window_width, window_height);
+            context.clearRect(0, 0, canvas.width, canvas.height);
 
             if ((xPos + 100) > canvas.width) {
                 dx = -dx;
