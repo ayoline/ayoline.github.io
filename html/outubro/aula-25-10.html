@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<!--
+    1. Crie uma página “agradável” em HTML que demonstre a estilização de uma lista não ordenada
+     (“ul”) com seus itens (“li”).
+     2. Crie uma página que demonstre a estilização de “links” nas suas mais diversas formas,
+      isto é: “link”, “visited”, “focus”, “hover”, “active”.
+     3. Obtenha uma fonte do tipo “.woff” ou “woff2” e utilize em uma página HTML. 
+     4. Escolha uma fonte obtida pelo “Google fonts” e a utilize em uma página HTML utilizando
+      os conceitos aprendidos de estilização de listas e links. 
+-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anderson P. Soares - Website" />
+    <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
+    <meta property="og:description" content="Página dos Exercícios relativos a aula 25-10-21" />
+    <meta property="og:image" content="https://ayoline.github.io/images/logoAlpha.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="Imagem do logo do GitPages" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "myFont";
+            src: url("../../Fonts/nightmare_station-webfont.woff2");
+        }
+
+        html {
+            font-family: 'Roboto', sans-serif;
+            background-color: #02635c;
+            color: white;
+            text-justify: auto;
+
+        }
+
+        span {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            color: #02635c;
+        }
+
+        h1 {
+            font-family: "myFont", "Bitstream Vera Serif", serif;
+            background-color: white;
+            color: #02635c;
+        }
+
+        a:link {
+            color: brown;
+        }
+
+        a:visited {
+            color: chartreuse;
+        }
+
+        a:focus {
+            color: violet;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        a:active {
+            color: turquoise;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Exercícios / CSS - Usando Font nightmare_station-webfont e <span>Roboto</span> / 25-10-21</h1>
+
+    <h2>Lista (não ordenada)</h2>
+
+    <p>Arquivo criado para testar webfonts e diversas customizações usando links e CSS.</p>
+
+    <ul>
+        <li>
+            <a href="https://fonts.google.com/" target="_blank">Fonts do google</a>
+        </li>
+        <li>
+            <a href="https://www.fontsquirrel.com/tools/webfont-generator" target="_blank">webfont Generator</a>
+        </li>
+        <li>
+            <a href="https://www.1001freefonts.com/">Link Free Fonts</a>
+        </li>
+        <li>
+            <a href="https://www.dafont.com/pt/soft.php#2">Link Free Fonts 2</a>
+        </li>
+    </ul>
+
+</body>
+
+</html>

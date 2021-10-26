@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 
+<!--
+    1. Crie uma página “agradável” em HTML que utilize a estilização CSS: “font-family”, “fontweight”,
+     “font-size” e “text-decoration”.
+    
+     A página poderá conter outros elementos já aprendidos (imagens, formulários, links etc.). Mostre 
+    o código e o resultado obtido. 
+
+    2. Demonstre o uso da manipulação de direção de textos a serem exibidos utilizando o CSS.
+-->
+
 <html>
 
 <head>
@@ -19,209 +29,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <style>
-        html {
-            background-color: white;
-            text-justify: auto;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            text-align: justify;
-        }
-
-        .blue {
-            color: #51a2da;
-            text-decoration-style: double;
-        }
-
-        .red {
-            color: #e92c00;
-            text-decoration: double;
-        }
-
-        .img-logo {
-            display: block;
-            margin-left: 5%;
-            max-width: 15%;
-            height: auto;
-
-        }
-
-        .box-in-row {
-            width: 80%;
-            height: 100%;
-            margin-top: 0%;
-            padding: 5% 5% 5% 5%;
-            box-sizing: border-box;
-        }
-
-        .box-in-row h2 {
-            text-align: center;
-            background-color: #51a2da;
-            text-align: center;
-            width: fit-content;
-            margin: 0 auto 0 auto;
-            padding: 1%;
-            border-radius: 25px 25px 25px 5px;
-            color: white;
-        }
-
-        .row {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .img1 {
-            max-width: 20%;
-            float: left;
-            padding: 1% 0% 1% 5%;
-        }
-
-        .box-column1 {
-            display: inline-flex;
-            background-color: #e9ecef;
-            border-radius: 1px;
-            width: auto;
-            max-height: 25%;
-        }
-
-        .box-column1 p {
-            padding: 2% 5% 2% 5%;
-        }
-
-        .row1 {
-            display: inline-flex;
-            align-items: center;
-        }
-
-
-        .box-in-row1 {
-            width: 80%;
-            height: 100%;
-            margin-top: 0%;
-            padding: 2% 5% 0% 5%;
-            box-sizing: border-box;
-        }
-
-        .box-in-row1 h2 {
-            background-color: #51a2da;
-            text-align: center;
-            width: fit-content;
-            margin: 0 auto 0 auto;
-            padding: 1%;
-            border-radius: 25px 25px 25px 5px;
-            color: white;
-        }
-
-        .images {
-            vertical-align: middle;
-            padding: 0% 0% 0% 5%;
-        }
-
-        .frame {
-            width: 100%;
-            text-align: center;
-            vertical-align: middle;
-            font-size: 12px;
-        }
-
-        .helper {
-            display: inline-block;
-            width: 250px;
-        }
-
-        .box-column2 {
-            display: inline-flex;
-            background-color: #e9ecef;
-            border-radius: 1px;
-            width: auto;
-            height: 25%;
-        }
-
-        .box-column2 h2 {
-            writing-mode: vertical-lr;
-            background-color: #51a2da;
-            text-align: center;
-            margin: 0 auto 0 auto;
-            padding: 1%;
-            color: #e9ecef;
-        }
-
-        .box-column2 p {
-            padding: 2% 5% 2% 5%;
-        }
-
-        .box-in-row2 {
-            width: 80%;
-            height: 100%;
-            margin-top: 0%;
-            padding: 2% 5% 0% 5%;
-            box-sizing: border-box;
-        }
-
-        .box-in-row2 h2 {
-            background-color: #1a1a1a;
-            text-align: center;
-            width: fit-content;
-            margin: 0 auto 0 auto;
-            padding: 1%;
-            border-radius: 25px 25px 5px 25px;
-            color: white;
-        }
-
-        .row2 {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .img2 {
-            max-width: 20%;
-            float: right;
-            padding: 0% 5% 0% 0%;
-        }
-
-        .footer {
-            text-align: right;
-            background-color: #1a1a1a;
-            width: 100%;
-            color: white;
-            padding-top: 1px;
-            padding-bottom: 1px;
-        }
-
-        .logo-white {
-            background-color: #51a2da;
-            padding: 5px 0% 5px 5%;
-        }
-
-        .logo-white img {
-            width: 10%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../CSS/aula-22-10.css" />
 </head>
-
-<!--
-    1. Crie uma página “agradável” em HTML que utilize a estilização CSS: “font-family”, “fontweight”,
-     “font-size” e “text-decoration”.
-    
-     A página poderá conter outros elementos já aprendidos (imagens, formulários, links etc.). Mostre 
-    o código e o resultado obtido. 
-
-    2. Demonstre o uso da manipulação de direção de textos a serem exibidos utilizando o CSS.
--->
 
 <body>
 
     <div class="logo-white">
-        <a href="https://getfedora.org/pt_BR/" target="_blank"> <img src="../../images/fedora/fedora-white.png"
-                alt="fedora logo"></a>
+        <a href="https://getfedora.org/pt_BR/" target="_blank">
+            <img src="../../images/fedora/fedora-white.png" alt="fedora logo">
+        </a>
     </div>
 
     <div class="row">
         <img class="img1" src="../../images/fedora/monitor-fedoralogo.png" alt="fedora">
+
         <div class="box-in-row">
             <h2>Bem-vindo à liberdade</h2>
 
@@ -263,7 +84,8 @@
             e o <span class="blue">fedora</span> Cloud para servidores com foco em computação em nuvem. Também existem
             outras
             edições, chamadas de "spins", com ambientes gráficos diferentes do ambiente gráfico
-            <a href="https://pt.wikipedia.org/wiki/GNOME" target="_blank">GNOME</a> que acompanha o sistema operacional.
+            <a href="https://pt.wikipedia.org/wiki/GNOME" target="_blank">
+                GNOME</a> que acompanha o sistema operacional.
             Ambientes gráficos como o <a href="https://pt.wikipedia.org/wiki/KDE" target="_blank">KDE</a>, <a
                 href="https://pt.wikipedia.org/wiki/Xfce" target="_blank">Xfce</a>, <a
                 href="https://pt.wikipedia.org/wiki/LXDE" target="_blank">LXDE</a>,
@@ -276,8 +98,9 @@
     <div class="row1">
         <div class="images">
             <div class="frame" style="padding-bottom: 50%;">
-                <a href="../../images/fedora/fedora-26.png" target="_blank"><img class="helper"
-                        src="../../images/fedora/fedora-26.png" alt="fedora-26"></a><br />
+                <a href="../../images/fedora/fedora-26.png" target="_blank">
+                    <img class="helper" src="../../images/fedora/fedora-26.png" alt="fedora-26">
+                </a><br />
                 <span>Captura de tela do Fedora 26 (2017)</span>
             </div>
 
@@ -417,13 +240,12 @@
         </div>
         <img class="img2" src="../../images/fedora/redhat.jpg" alt="redhat">
     </div>
-
-    <div class="footer">
-        <p> Sponsored by <a href="https://www.redhat.com" target="_blank"><span style="color: #e92c00;">Red
-                    Hat</span></a>. © 2021 Red
-            Hat, Inc. and others.</p>
-    </div>
-
 </body>
+
+<footer>
+    <p> Sponsored by <a href="https://www.redhat.com" target="_blank"><span style="color: #e92c00;">Red
+                Hat</span></a>. © 2021 Red
+        Hat, Inc. and others.</p>
+</footer>
 
 </html>
