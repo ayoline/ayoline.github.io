@@ -113,7 +113,9 @@ body {
 }
 
 .frames-in-row-history {
-    width: 100%;
+    height: 100%;   
+    display: flex;  
+    flex-direction: column;
     text-align: center;
     vertical-align: middle;
     font-size: 12px;
