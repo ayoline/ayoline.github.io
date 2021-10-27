@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<!--
+    Criar uma página que demonstre os diversos alinhamentos de itens em um elemento do tipo “flex”, 
+    isto é, no mínimo :
+
+    um elemento flex que contenha uma imagem centralizada dentro do container;
+    um elemento flex que contenha itens alinhados no centro;
+    um elemento flex que contenha itens alinhados na vertical;
+    um elemento que contenha itens alinhados na horizontal.
+-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anderson P. Soares - Website" />
+    <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
+    <meta property="og:description" content="Página dos Exercícios relativos a aula 26-10-21" />
+    <meta property="og:image" content="https://ayoline.github.io/images/logoAlpha.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="Imagem do logo do GitPages" />
+    <link rel="stylesheet" type="text/css" href="../../CSS/aula-27-10.css">
+</head>
+
+<body>
+
+    <h1>Exercício / CSS - FlexBox / 27-10-21</h1>
+
+    <main class="main-flexbox">
+
+        <section class="vertical-in-main-flexbox">
+
+            <div class="flex-center-img">
+                <h2>
+                    Flex usando uma imagem centralizada
+                </h2>
+                <img src="../../images/ex1.jpg" alt="imagem de exemplo">
+            </div>
+
+            <div class="flex-align-center">
+                <h2>
+                    Flex usando elementos alinhados ao centro
+                </h2>
+                <div class="boxes-in-flex-align-center">
+                    <p>
+                        box 1
+                    </p>
+                    <p>
+                        box 2
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-align-horizontal">
+                <h2>
+                    Flex usando elementos alinhados na horizontal
+                </h2>
+                <div class="boxes-in-flex-align-horizontal">
+                    <p>
+                        Box 1
+                    </p>
+                    <p>
+                        Box 2
+                    </p>
+                    <p>
+                        Box 3
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="alone-in-main-flexbox">
+
+            <div class="flex-align-vertical">
+                <h2>
+                    Flex usando elementos alinhados na vertical
+                </h2>
+                <div class="boxes-in-flex-align-vertical">
+                    <p>
+                        Box 1
+                    </p>
+                    <p>
+                        Box 2
+                    </p>
+                    <p>
+                        Box 3
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

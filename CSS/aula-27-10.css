@@ -1,0 +1,208 @@
+html {
+    background-color: #02635c;
+    color: white;
+    font-size: 18px;
+}
+
+h1 {
+    display: block;
+    width: fit-content;
+    padding: 1px;
+    border-radius: 5px;
+    background-color: white;
+    color: #02635c;
+    margin: 0 auto 5px auto;
+}
+
+body {
+    align-content: center;
+    align-items: center;;
+}
+
+.main-flexbox {
+    border: solid 1px white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 1px white;
+    width: 98%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 1% 1% 1%;
+}
+
+.vertical-in-main-flexbox {
+    border: solid 1px yellow;
+    border-radius: 15px;
+    box-shadow: 5px 5px 1px yellow;
+    margin: auto;
+}
+
+.alone-in-main-flexbox {
+    border: solid 1px yellow;
+    border-radius: 15px;
+    box-shadow: 5px 5px 1px yellow;
+    width: 45%;
+    margin: auto;
+}
+
+.flex-center-img {
+    border: solid 1px red;
+    border-radius: 15px;
+    box-shadow: 5px 5px 1px red;
+    width: 80%;
+    margin: 10px auto 10px auto;
+    display: block;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flex-center-img h2 {
+    display: block;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: white;
+    color: #02635c;
+    margin: 10px auto 0 auto;
+    margin-bottom: 10px;
+}
+
+.flex-center-img img {
+    width: 50%;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+.flex-align-center {
+    border: solid 1px hotpink;
+    border-radius: 15px;
+    width: 80%;
+    display: flex;
+    margin: 15px auto 15px auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 1px hotpink;
+}
+
+.flex-align-center h2 {
+    display: flex;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: white;
+    color: #02635c;
+    margin: 10px auto 0 auto;
+    margin-bottom: 20px;
+}
+
+.boxes-in-flex-align-center {
+    border: solid 1px white;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.boxes-in-flex-align-center p {
+    background-color: rgb(39, 39, 163);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 15px;
+    margin: 5px;
+}
+
+
+
+.flex-align-horizontal {
+    border: solid 1px blue;
+    border-radius: 15px;
+    width: 95%;
+    display: flex;
+    margin: 15px auto 10px auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 1px blue;
+}
+
+.flex-align-horizontal h2 {
+    display: flex;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: white;
+    color: #02635c;
+    margin: 10px auto 0 auto;
+    margin-bottom: 10px;
+}
+
+.boxes-in-flex-align-horizontal {
+    border: solid 1px white;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.boxes-in-flex-align-horizontal p {
+    background-color: chartreuse;
+    color: black;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 15px;
+    margin: 5px;
+}
+
+
+
+.flex-align-vertical {
+    border: solid 1px rgb(11, 236, 206);
+    border-radius: 15px;
+    width: 90%;
+    display: flex;
+    margin: 15px auto 15px auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 1px rgb(11, 236, 206);
+}
+
+.flex-align-vertical h2 {
+    display: flex;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: white;
+    color: #02635c;
+    margin: 10px auto 0 auto;
+    margin-bottom: 10px;
+}
+
+.boxes-in-flex-align-vertical {
+    border: solid 1px white;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px 10px 10px;
+    width: 90%;
+}
+
+.boxes-in-flex-align-vertical p {
+    background-color: tomato;
+    color: black;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 15px;
+    margin: 5px;
+}
