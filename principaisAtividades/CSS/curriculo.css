@@ -60,6 +60,7 @@ h3{
     margin: auto;
     vertical-align: middle;
     border-radius: 500px;
+    box-shadow: 0.3em 0.3em 0.1em #365159;
 }
 
 header .text-career{
@@ -94,6 +95,14 @@ header .text-career{
 
 .general img{
     width: 30%;
+}
+
+.general img:hover{
+    width: 32%
+}
+
+.general a:link{
+    color: #365159;
 }
 
     main{
