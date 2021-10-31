@@ -105,6 +105,10 @@ header .text-career{
     color: #365159;
 }
 
+.general a:visited{
+    color: rgb(97, 31, 160);
+}
+
     main{
     display: inline-flex;
     vertical-align: top;
