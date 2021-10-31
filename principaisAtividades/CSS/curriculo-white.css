@@ -1,12 +1,12 @@
 html{
-    background-color: #262626 ;
-    color: #f6f6f6 ;
+    background-color: #ffff ;
+    color: #000000 ;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
 
 .hr-light{
-    color: #c4cfe9;
+    color: #cadee5;
     border: solid 2px;
     width: 100%;
     padding: 0px;
@@ -22,6 +22,7 @@ html{
 }
 
 header{
+    border: solid white;
     padding: 1%;
     flex-direction: column;
     width: 98%;
@@ -30,6 +31,7 @@ header{
 }
 
 header .name-image{
+    border: solid white;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -39,7 +41,8 @@ header .name-image{
 }
 
 .name-image h1{
-    color: #c4cfe9;
+    color: #2c3b57;
+    border: solid;   
     font-size: 3em;
     width: inherit;
     display: inline-flex;
@@ -49,12 +52,13 @@ header .name-image{
 }
 
 h3{
-    color: #c4cfe9;
+    color: #cadee5;
     text-align: left;
     justify-content: center;
 }
 
 .name-image img{
+    border: solid;
     width: 15%;
     height: 15%;
     margin: auto;
@@ -66,6 +70,7 @@ header .text-career{
     display: table;
     vertical-align: top;
     text-align: center;
+    border: solid;
     width: inherit;
     height: 100%;
     padding: 1%;
@@ -73,11 +78,13 @@ header .text-career{
 }
 
 .text-career h2{
+    border: solid;
     display: table-cell;
     font-size: 2.5em;
 }
 
 .info-contact{
+    border: solid;
     display: inline-flex;
     flex-direction: row;
     width: inherit;
@@ -93,10 +100,12 @@ header .text-career{
 }
 
 .general img{
+    fill: #2c3b57;
     width: 30%;
 }
 
     main{
+    border: solid white;
     display: inline-flex;
     vertical-align: top;
     padding: 0% 1%;
@@ -107,6 +116,7 @@ header .text-career{
 }
 
 .left-column{
+    border: dashed white;
     width: 50%;
     padding: 1%;
     margin: auto;
