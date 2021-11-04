@@ -94,11 +94,11 @@ header .text-career{
 }
 
 .general img{
-    width: 30%;
+    width: 28%;
 }
 
 .general img:hover{
-    width: 32%
+    filter: invert(30%) sepia(13%) saturate(1053%) hue-rotate(147deg) brightness(90%) contrast(90%);
 }
 
 .general a:link{
