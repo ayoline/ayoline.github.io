@@ -1,8 +1,9 @@
-html{
+body{
     background-color: #ffffff ;
     color: #404040;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    width: 98%;
 }
 
 .hr-light{
@@ -26,7 +27,8 @@ html{
 header{
     padding: 1%;
     flex-direction: column;
-    width: 98%;
+    max-width: 1920px;
+    width: 100%;
     margin: auto;
     box-sizing: border-box;
 }
@@ -117,7 +119,7 @@ main{
     vertical-align: top;
     padding: 0% 1%;
     flex-direction: row;
-    width: 98%;
+    width: 100%;
     margin: 1%;
     box-sizing: border-box;
 }
@@ -138,18 +140,12 @@ main{
     box-sizing: border-box;
 }
 
-.objective p{
-    text-indent: 5%;
+.texts{
     text-align: justify;
     padding: 1%;
 }
 
-.experience .qualifications .it .ad-information{
-    text-align: justify;
-    padding: 1%;
-}
-
-.formation p{
+.texts p{
     text-indent: 5%;
     text-align: justify;
     padding: 1%;
@@ -162,7 +158,7 @@ footer{
 footer hr{
     background-color: #cadde6;
     border-color:#cadde6;
-    width: 98%;
+    width: 100%;
     padding: 2px;
     margin: auto;
 }
