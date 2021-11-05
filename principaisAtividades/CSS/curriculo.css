@@ -1,12 +1,13 @@
 html{
-    background-color: #262626 ;
-    color: #f6f6f6 ;
+    background-color: #ffffff ;
+    color: #404040;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
 
 .hr-light{
-    color: #c4cfe9;
+    color: #cadde6;
+    background-color: #cadde6;
     border: solid 2px;
     width: 100%;
     padding: 0px;
@@ -14,7 +15,8 @@ html{
 }
 
 .hr-dark{
-    color: #365159;
+    color: #303258;
+    background-color: #303258;
     border: solid 2px;
     width: 100%;
     padding: 0px;
@@ -39,7 +41,7 @@ header .name-image{
 }
 
 .name-image h1{
-    color: #c4cfe9;
+    color: #303258;
     font-size: 3em;
     width: inherit;
     display: inline-flex;
@@ -49,7 +51,7 @@ header .name-image{
 }
 
 h3{
-    color: #c4cfe9;
+    color: #303258;
     text-align: left;
     justify-content: center;
 }
@@ -60,7 +62,7 @@ h3{
     margin: auto;
     vertical-align: middle;
     border-radius: 500px;
-    box-shadow: 0.3em 0.3em 0.1em #365159;
+    
 }
 
 header .text-career{
@@ -73,9 +75,10 @@ header .text-career{
     
 }
 
-.text-career h2{
+.text-career {
     display: table-cell;
     font-size: 2.5em;
+    color: #000000;
 }
 
 .info-contact{
@@ -98,7 +101,7 @@ header .text-career{
 }
 
 .general img:hover{
-    filter: invert(30%) sepia(13%) saturate(1053%) hue-rotate(147deg) brightness(90%) contrast(90%);
+    filter: invert(0%) sepia(0%) saturate(24%) hue-rotate(202deg) brightness(80%) contrast(100%);
 }
 
 .general a:link{
@@ -109,8 +112,8 @@ header .text-career{
     color: #367588;
 }
 
-    main{
-    display: inline-flex;
+main{
+    display: flex;
     vertical-align: top;
     padding: 0% 1%;
     flex-direction: row;
@@ -127,7 +130,7 @@ header .text-career{
 }
 
 .dark-table{
-    background-color: #365159;
+    background-color: #cadde6;
     width: 50%;
     margin: 0 0;
     vertical-align: top;
@@ -153,12 +156,12 @@ header .text-career{
 }
 
 footer{
-padding: 1%;
+    padding: 1%;
 }
 
 footer hr{
-    background-color: #365159;
-    border-color:#365159;
+    background-color: #cadde6;
+    border-color:#cadde6;
     width: 98%;
     padding: 2px;
     margin: auto;
