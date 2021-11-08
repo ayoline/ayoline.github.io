@@ -11,18 +11,6 @@
 }
 
 @font-face {
-    font-family: "UKIJ-TuzQ";
-    src: url("../../novembro-2021/fonts/UKIJTuzQ.ttf") format('truetype'),
-         url("../../novembro-2021/fonts/ukijtuzq-webfont.woff") format('woff');
-}
-
-@font-face {
-    font-family: "UKIJ-TuzQB";
-    src: url("../../novembro-2021/fonts/UKIJTuzQB.ttf") format('truetype'),
-         url("../../novembro-2021/fonts/ukijtuzqb-webfont.woff") format('woff');
-}
-
-@font-face {
     font-family: "Spinnaker";
     src: url("../../novembro-2021/fonts/Spinnaker-Regular.ttf") format('truetype'),
          url("../../novembro-2021/fonts/Spinnaker-Regular.woff") format('woff');
@@ -30,40 +18,38 @@
 
 html{
     scroll-padding-top: 105px;
+    overflow-x: hidden;
 }
 
 body{
+    background-color: #f6f6f6;
     font-family: "Spinnaker";
     width: 100%;
+    max-width: 1920px;
     left: 0;
     right: 0;
-    max-width: 1920px;
-    background-color: #f6f6f6;
     margin: 0%;
 }
 
 .fixed-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.5em transparent;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
     width: 100%;
     height: 105px;
-    background-color: #ffffff;
-    box-shadow: 0 0 0.5em transparent;
+    
   }
 
 .fixed-navbar a{
-    padding: 1.3%;
     color: #515151;
+    padding: 1.3%;
     text-decoration: none;
 }
 
-.fixed-navbar a:hover{
-    color : #898989;
-}
-
-.fixed-navbar a:focus{
+.fixed-navbar a:hover, a.active, a:focus, a.current {
     color : #898989;
 }
 
@@ -75,8 +61,8 @@ body{
 }
 
 .titles-in-fixed-navbar h1{
-    font-family: "tinosB";
     color: #3d3d3d;
+    font-family: "tinosB";
     font-size: 1.8rem;
     width: 20%;
     padding-top: 1%;
@@ -96,25 +82,25 @@ body{
 }
 
 .initial-image{
-    width: 100%;
-    height: 800px;
-    margin-top: 105px;
-    background-image: url("../images/aula-05-11/capa.png");
     background-color: #cccccc;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 800px;
+    margin-top: 105px;
+    background-image: url("../images/aula-05-11/capa.png");
     position: relative;
 }
 
 .initial-text{
+    color: white;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: baseline;
     text-align: center;
-    color: white;
 }
 
 .initial-text p{
@@ -124,29 +110,29 @@ body{
 }
 
 .initial-text h2{
+    font-family: tinosB;
     margin-top: 0%;
     margin-bottom: 1%;
-    font-family: tinosB;
     font-size: 5.7rem;
 }
 
 .initial-text a{
+    color: #35548f;
     margin-top: 0%;
     text-decoration: none;
-    color: #35548f;
 }
 
 .initial-text hr{
     color: #35548f;
+    width: 7%;
     border: solid 1px;
     text-align: center;
-    width: 7%;
 }
 
 .books{
+    background-color: #f6f6f6;
     width: 100%;
     height: 800px;
-    background-color: #f6f6f6;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -157,24 +143,24 @@ body{
     color: #35548f;
     font-weight: lighter;
     letter-spacing: 6px;
-    margin-top: 8%;
     font-size: 1.8rem;
+    margin-top: 8%;
 }
 
 .books hr{
     border-top: 1px solid #5386e4;
+    width: 75%;
     text-align: center;
     margin-top: 0%;
-    width: 75%;
 }
 
 .titles-in-books{
     width: 72%;
-    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .frame-in-books{
@@ -186,27 +172,27 @@ body{
 }
 
 .frame-in-books p{
-    margin-top: 5%;
-    margin-bottom: 3%;
-    font-size: 1.2rem;
-    font-family: tinos;
     color: #1f1f1f;
     border-bottom: 1px solid #5386e4;
+    font-family: tinos;
+    font-size: 1.2rem;
     padding-bottom: 3%;
+    margin-top: 5%;
+    margin-bottom: 3%;
 }
 
 .preco-in-frames{
     color: #3d3d3d;
-    font-size: 1.2rem;
     font-family: tinos;
+    font-size: 1.2rem;
     font-style: italic;
 }
 
 .midia{
-    width: 100%;
-    height: 700px;
     color: white;
     background-color: #35548f;
+    width: 100%;
+    height: 700px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -215,24 +201,24 @@ body{
 
 .midia h2{
     color: white;
+    border-bottom: 1px solid white;
     width: 72%;
     font-weight: lighter;
     letter-spacing: 6px;
-    margin-top: 7%;
     font-size: 1.8rem;
-    margin-inline: auto;
-    border-bottom: 1px solid white;
     padding-bottom: 3%;
+    margin-inline: auto;
+    margin-top: 7%;
 }
 
 .titles-in-midia{
     width: 72%;
-    margin-inline: auto;
-    margin-top: 3%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
+    margin-inline: auto;
+    margin-top: 3%;
 }
 
 .frame-in-midia{
@@ -245,43 +231,43 @@ body{
 }
 
 .frame-in-midia img{
-    margin-inline: auto;
     width: 15%;
     margin-bottom: 10%;
+    margin-inline: auto;
 }
 
 .frame-in-midia p{
-    font-size: 1.1rem;
     font-family: tinos;
+    font-size: 1.1rem;
     letter-spacing: 2.4px;
     line-height: 140%;
 }
 
 .frame-in-midia hr{
     border-top: thin white;
+    width: 25%;
     text-align: center;
     margin-top: 11%;
     margin-bottom: 14%;
-    width: 25%;
 }
 
 .frase1-in-midia{
-    font-size: 1rem;
     font-family: tinosB;
+    font-size: 1rem;  
     letter-spacing: 1.7px;
 }
 
 .frase2-in-midia{
-    font-size: 1rem;
     font-family: tinos;
+    font-size: 1rem;
     letter-spacing: 1.7px;
     margin-top: 2%;
 }
 
 .biografia{
+    background-color: #f6f6f6;
     width: 100%;
     height: 600px;
-    background-color: #f6f6f6;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -290,28 +276,28 @@ body{
 
 .biografia h2{
     color: #35548f;
-    width: 70%;
     border-bottom: 1px solid #5386e4;
-    margin: 5% auto 6% auto;
+    width: 70%;
     font-weight: lighter;
     letter-spacing: 6px;
     font-size: 1.8rem;
     padding-bottom: 3%;
+    margin: 5% auto 6% auto;
 }
 
 .box-in-biografia{
     width: 70%;
-    margin-inline: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
+    margin-inline: auto;
 }
 
 .frame-in-biografia p{
     color: #3d3d3d;
-    font-size: 1rem;
     font-family: tinos;
+    font-size: 1rem;
     letter-spacing: 0.8px;
     text-align: left;
     line-height: 140%;
@@ -320,9 +306,9 @@ body{
 }
 
 .eventos{
+    background-color: #1c2d4c;
     width: 100%;
     height: 850px;
-    background-color: #1c2d4c;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -332,7 +318,6 @@ body{
 .eventos h2{
     color: white;
     width: 100%;
-    margin: 5% auto 6% auto;
     font-weight: lighter;
     font-size: 1.8rem;
     margin: 10% auto 6% auto;
@@ -342,10 +327,10 @@ body{
     font-family: tinos;
     width: 73%;
     height: 520px;
-    margin-inline: auto;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    margin-inline: auto;
 }
 
 .frame-in-eventos{
@@ -364,8 +349,8 @@ body{
 }
 
 .date-in-eventos{
-    height: 100%;
     width: 12%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
@@ -374,18 +359,18 @@ body{
 
 .hour-in-date{
     color: white;
-    font-size: 2.2rem;
-    margin: auto;
     width: fit-content;
     height: fit-content;
+    font-size: 2.2rem;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .days-in-date{
     color: white;
-    font-size: 1rem;
     width: 100%;
     height: 100%;
+    font-size: 1rem;
     box-sizing: border-box;
     padding-left: 5%;
     display: flex;
@@ -400,14 +385,14 @@ body{
 }
 
 .day2-in-date{
-    margin-top: 0px;
     color: #f5f6f7;
+    margin-top: 0px;
 }
 
 .autografos-in-eventos{
-    height: 100%;
     color: white;
     width: 100%;
+    height: 100%; 
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -437,11 +422,11 @@ body{
 }
 
 .btn-in-eventos p{
-    width: fit-content;
     color: white;
+    background-color: #5386e4;
+    width: fit-content;
     padding: 9%;
     margin: auto auto;
-    background-color: #5386e4;
 }
 
 #before-contato{
@@ -451,10 +436,10 @@ body{
 }
 
 .contato{
+    background-color: white;
     font-family: tinus;
     width: 100%;
     height: 650px;
-    background-color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -462,15 +447,15 @@ body{
 }
 
 .contato h2{
-    font-family: Spinnaker;
     color: #656a74;
-    width: 70%;
     border-bottom: 1px solid #5386e4;
-    margin: 5% auto 6% auto;
+    font-family: Spinnaker;
+    width: 70%;
     font-weight: lighter;
     letter-spacing: 6px;
     font-size: 1.8rem;
     padding-bottom: 3%;
+    margin: 5% auto 6% auto;
 }
 
 .box1-in-contato{
@@ -486,49 +471,66 @@ body{
 }
 
 .box2-in-contato p{
-    margin-top: 2%;
-    font-size: 1rem;
     color: #606060;
+    font-size: 1rem;
     margin-bottom: 0px;
+    margin-top: 2%;
 }
 
 .row-box2-in-contato{
-    margin-top: 1%;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
     justify-content: center;
+    margin-top: 1%;
 }
 
 .row-box2-in-contato input{
+    color: #6e6e6e;
+    border: solid 1px black;
+    width: 23%;
     text-indent: 20px;
     font-family: Spinnaker;
     font-size: 1rem;
-    border: solid 1px black;
-    color: #6e6e6e;
-    width: 23%;
     border-radius: 0%;
     line-height: 25px;
     margin-right: 8px;
 }
 
-.row-box2-in-contato button{
-    font-family: Spinnaker;
-    font-size: 1rem;
+.row-box2-in-contato input:hover{
+    border: solid 3px black;
+    
+}
+
+.row-box2-in-contato a{
     color: #6e6e6e;
-    width: 9%;
     background-color: transparent;
     border: solid 1px #6e6e6e;
+    font-family: Spinnaker;
+    width: 9%;
+    font-size: 1rem;
+    padding: 10px;
+    text-decoration: none;
+    margin: auto 0;
+}
+
+.row-box2-in-contato a:hover{
+    color: white;
+    background-color: #6e6e6e;
+    border: solid 1px #6e6e6e;
+    font-family: Spinnaker;
+    width: 9%;
+    font-size: 1rem;
 }
 
 .links-in-contato {
     width: 47%;
-    margin-inline: auto;
-    margin-top: 4%;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
     justify-content: space-between;
+    margin-inline: auto;
+    margin-top: 4%;
 }
 
 .links-in-contato a{
@@ -538,12 +540,12 @@ body{
 .social-networks-in-contato{
     color: #4e4e4e;
     width: 15%;
-    margin-inline: auto;
-    margin-top: 4%;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
     justify-content: space-between;
+    margin-inline: auto;
+    margin-top: 4%;
 }
 
 .social-networks-in-contato #facebook{
@@ -559,10 +561,10 @@ body{
 }
 
 .footer{
+    background-color: #f6f6f6;
     font-family: tinus;
     width: 100%;
-    height: 120px;
-    background-color: #f6f6f6;
+    height: 120px; 
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -572,9 +574,9 @@ body{
 }
 
 .footer p{
+    color: #5b5b5b;
     font-size: 0.9rem;
     letter-spacing: 0.7px;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: #5b5b5b;
 }
