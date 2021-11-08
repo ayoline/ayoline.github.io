@@ -554,7 +554,7 @@ body{
     width: 19px;
 }
 
-footer{
+.footer{
     font-family: tinus;
     width: 100%;
     height: 120px;
@@ -567,7 +567,7 @@ footer{
     padding: 3%;
 }
 
-footer p{
+.footer p{
     font-size: 0.9rem;
     letter-spacing: 0.7px;
     margin-top: 0px;
