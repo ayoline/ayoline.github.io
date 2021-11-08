@@ -553,3 +553,24 @@ body{
 .social-networks-in-contato #linkedin{
     width: 19px;
 }
+
+footer{
+    font-family: tinus;
+    width: 100%;
+    height: 100px;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2%;
+}
+
+footer p{
+    font-size: 0.9rem;
+    letter-spacing: 0.7px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #5b5b5b;
+}
