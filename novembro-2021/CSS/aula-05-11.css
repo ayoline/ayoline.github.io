@@ -28,6 +28,10 @@
          url("../../novembro-2021/fonts/Spinnaker-Regular.woff") format('woff');
 }
 
+html{
+    scroll-padding-top: 105px;
+}
+
 body{
     font-family: "Spinnaker";
     width: 100%;
