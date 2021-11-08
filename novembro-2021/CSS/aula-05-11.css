@@ -1,19 +1,19 @@
 @font-face {
     font-family: "tinos";
-    src: url("../../novembro-2021/fonts/Tinos-Regular.ttf") format('truetype'),
-         url("../../novembro-2021/fonts/tinos-regular-webfont.woff") format('woff');
+    src: url("../fonts/Tinos-Regular.ttf") format('truetype'),
+         url("../fonts/tinos-regular-webfont.woff") format('woff');
 }
 
 @font-face {
     font-family: "tinosB";
-    src: url("../../novembro-2021/fonts/Tinos-Bold.ttf") format('truetype'),
-         url("../../novembro-2021/fonts/tinos-bold-webfont.woff") format('woff');
+    src: url("../fonts/Tinos-Bold.ttf") format('truetype'),
+         url("../fonts/tinos-bold-webfont.woff") format('woff');
 }
 
 @font-face {
     font-family: "Spinnaker";
-    src: url("../../novembro-2021/fonts/Spinnaker-Regular.ttf") format('truetype'),
-         url("../../novembro-2021/fonts/Spinnaker-Regular.woff") format('woff');
+    src: url("../fonts/Spinnaker-Regular.ttf") format('truetype'),
+         url("../fonts/Spinnaker-Regular.woff") format('woff');
 }
 
 html{
