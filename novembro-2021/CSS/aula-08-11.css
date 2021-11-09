@@ -17,27 +17,30 @@ body{
     left: 0;
     right: 0;
     margin: 0%;
-   
 }
 
 header{
     background-color: #ffffff;
     box-shadow: 0 0 0.5em transparent;
+    width: 100%;
+    height: 205px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 9999;
-    width: 100%;
-    height: 205px;
     display: inline-flex;
     flex-direction: column;
 }
 
 .menu{
-    text-align: center;
     width: 100%;
     height: 100%;
+    text-align: center;
     box-sizing: border-box;
+}
+
+.menu img{
+    padding-top: 1%;
 }
 
 nav{
@@ -60,6 +63,11 @@ nav{
 .nav-itens a{
     font-size: 0.9rem;
     padding: 1%;
+}
+
+.nav-itens a:hover{
+    color: #8fd3e8;
+    cursor: pointer;
 }
 
 .image-bg{
@@ -116,16 +124,16 @@ nav{
 }
 
 .titles-in-section2{
-    width: 65%;
+    width: 75%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     box-sizing: border-box;
     margin: auto;
 }
 
 .frame-in-section2{
-    width: fit-content;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -146,16 +154,21 @@ nav{
 .frame-in-section2 p{
     color: #7b7a7a;
     font-size: 1rem;
+    margin-top: 0px;
 }
 
 .frame-in-section2 a{
     color: white;
     background-color: #8fd3e8;
-    font-size: 0.9rem;
     width: fit-content;
+    font-size: 0.9rem;
     text-decoration: none;
+    padding: 3% 10%;
     margin-inline: auto;
-    padding: 2% 10%;
+}
+
+.frame-in-section2 a:hover{
+    opacity: 60%;
 }
 
 .image-grid{
@@ -166,6 +179,12 @@ nav{
     justify-content: baseline;
     box-sizing: border-box;
     margin: 0px;
+}
+
+.image-grid img:hover{
+    background-color: white;
+    opacity: 20%;
+    cursor: pointer;
 }
 
 .image-grid #grid1{
@@ -238,8 +257,8 @@ nav{
 }
 
 #column2-in-footer{
-    display: flex;
     width: 30%;
+    display: flex;
     text-align: right;
     flex-direction: column;
     justify-content: center;
@@ -249,4 +268,67 @@ nav{
 #column2-in-footer p{
     margin-top: 0px;
     margin-bottom:0px;
+}
+
+.btn-chat{
+    background-color: #c5e8f4;
+    width: 23%;
+    height: 60px;
+    box-shadow: 0 0 0.1em transparent;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 9999;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.btn-chat a{
+    color: #476a74;
+    font-family: chelsea;
+    width: 100%;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.social-media-menu{
+    background-color: transparent;
+    box-shadow: 0 0 0.1em transparent;
+    width: fit-content;
+    height: 130px;
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-media-menu img{
+    padding-bottom: 10px;
+    margin-inline: auto;
+}
+
+.social-media-menu img:hover{
+    cursor: pointer;
+}
+
+#sm1 {
+    width: 10px;
+}
+
+#sm2 {
+    width: 20px;
+}
+
+#sm3 {
+    width: 23px;
+}
+
+#sm4 {
+    width: 23px;
 }
