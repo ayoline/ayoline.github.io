@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "palatinoR";
+    src: url("../fonts/pala.ttf") format('truetype'),
+         url("../fonts/PalatinoLinotype-Roman.woff") format('woff');
+}
+
+@font-face {
+    font-family: "ralewayR";
+    src: url("../fonts/Raleway-Regular.ttf") format('truetype'),
+         url("../fonts/Raleway-Regular.woff") format('woff');
+}
+
+@font-face {
+    font-family: "ralewayB";
+    src: url("../fonts/Raleway-Bold.ttf") format('truetype'),
+         url("../fonts/Raleway-Bold.woff") format('woff');
+}
+
+
