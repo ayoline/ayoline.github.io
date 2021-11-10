@@ -226,6 +226,7 @@ h3{
     position: relative;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
 }
