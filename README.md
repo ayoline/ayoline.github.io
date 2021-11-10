@@ -1,6 +1,6 @@
 # 📦 Repository of lessons.
 
-### This repository was created to share the exercises of each class with colleagues and teachers.
+### This repository was created to share the exercises of each class with colleagues and teachers
 
 > Status: Developing... ⚠️ 
 ## Language used so far in this repository::
