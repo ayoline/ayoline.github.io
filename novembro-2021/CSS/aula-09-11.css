@@ -16,4 +16,277 @@
          url("../fonts/Raleway-Bold.woff") format('woff');
 }
 
+html{
+    scroll-padding-top: 90px;
+    overflow-x: hidden;
+}
 
+body{
+    background-color: white;
+    font-family: ralewayR;
+    width: 100vw;
+    max-width: 1920px;
+    left: 0;
+    right: 0;
+    margin: 0%;
+}
+
+header{
+    background-color: #ffffff;
+    width: 100vw;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+nav{
+    background-color: white;
+    border-bottom: solid black;
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-inline: auto;
+}
+
+.menus-in-nav{
+    width: 45%;
+    display: flex;
+    padding-left: 12%;
+    justify-content: space-between;
+    margin: auto auto;
+}
+
+.menus-in-nav a{
+    color: #585354;
+    text-decoration: none;
+}
+
+.menus-in-nav a:hover{
+    color: #a09597;
+    transition: 0.8s;
+}
+
+.social-media-in-nav{
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0px;
+}
+
+.social-media-in-nav img:hover{
+    cursor: pointer;
+}
+
+main{
+    width: 90%;
+    height: fit-content;
+    margin-top: 90px;
+    margin-inline: auto;
+}
+
+.initial-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.initial-container h1{
+    font-size: 1rem;
+    font-family: palatinoR;
+    font-weight: lighter;
+    letter-spacing: 4.25px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    cursor: pointer;
+}
+
+.frames-in-initial-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.midlebox-in-initial-container{
+    background-color: #f7e9e4;
+    width: 100%/3;
+    height: 689px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: 2%;
+}
+
+.midlebox-in-initial-container h2{
+    color: #292325;
+    font-family: ralewayB;
+    text-align: center;
+    font-size: 2rem;
+    width: 70%;
+    margin-inline: auto;
+}
+
+.midlebox-in-initial-container a{
+    color: #292325;
+    background-color: white;
+    font-family: ralewayB;
+    width: fit-content;
+    text-decoration: none;
+    padding: 4% 10%;
+    border: solid transparent;
+    margin-inline: auto;
+}
+
+.midlebox-in-initial-container a:hover{
+    border: solid #292325;
+    transition: 0.2s;
+}
+
+.frames-in-initial-container img{
+    width: 100%/3;
+}
+
+.banner-transparent{
+    background-color:  #ebebf2;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.banner-transparent h2{
+    color: #292325;
+    font-family: ralewayB;
+    font-size: 1.4rem;
+    letter-spacing: 2.2px;
+    padding: 4%;
+}
+
+.lia-donuts{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.images-in-lia-donuts{
+    width: 49%;
+    position: relative;
+}
+
+.images-in-lia-donuts img{
+    width: 100%;
+}
+
+.lia-donuts a{
+    color: #292325;
+    background-color: #ffffff;
+    font-family: ralewayB;
+    position: absolute;
+    text-decoration: none;
+    padding: 2% 5%;
+    border: solid transparent;
+    bottom: 10%;
+    right: 10%;
+}
+
+.lia-donuts a:hover{
+    border: solid #292325;
+    transition: 0.2s;
+}
+
+h3{
+    color: #292325;
+    width: 100%;
+    font-family: ralewayB;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2%;
+    box-sizing: border-box;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.image-grid{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.image-grid img:hover{
+    transition: 0.2s;
+    opacity: 0.5;
+}
+
+.newsletter{
+    color: #292325;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.newsletter p{
+    font-family: ralewayB;
+}
+
+.newsletter input{
+    color: #292325;
+    border: solid 1px #292325;
+    width: 28%;
+    font-family: ralewayB;
+    font-size: 0.9rem;
+    text-indent: 20px;
+    border-radius: 0%;
+    line-height: 35px;
+    margin-inline: auto;
+}
+
+.newsletter a{
+    color: white;
+    background-color: #292325;
+    border: solid #292325;
+    width: 28%;
+    text-decoration: none;
+    line-height: 35px;
+    margin-top: 1%;
+    margin-inline: auto;
+}
+
+.newsletter a:hover{
+    color: #292325;
+    background-color: rgba(196, 192, 192, 0.89);
+    transition: 0.8s;
+    border: solid rgba(196, 192, 192, 0.89);
+}
+
+.footer{
+    background-color: #f7e9e4;
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    box-sizing: border-box;
+    border: dashed transparent;
+    bottom: 0;
+    margin: 0%;
+}
