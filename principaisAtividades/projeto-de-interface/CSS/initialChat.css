@@ -1,39 +1,115 @@
-@font-face{
-    font-family: "montserratR";
-    src: url("../fonts/Montserrat-Regular.ttf") format("truetype"),
-         url("../fonts/montserrat-regular-webfont.woff") format("woff");
-}
-
-@font-face{
-    font-family: "montserratB";
-    src: url("../fonts/Montserrat-Bold.ttf") format("truetype"),
-         url("../fonts/montserrat-bold-webfont.woff") format("woff");
+*{
+    box-sizing: border-box;
 }
 
 body{
-    font-family: montserratR;
+    font-family: Montserrat;
     width: 100vw;
     height: 100vh;
     max-width: 1920px;
     top: 0;
     left: 0;
     right: 0;
-    box-sizing: border-box;
-    margin: 0%;
+    margin: auto;
     border: dashed firebrick;
 }
 
 .container{
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     border: dashed blue;
 }
 
 header{
     width: 100%;
-    height: 60px;
-    box-sizing: border-box;
+    height: 123.65px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
     border: dashed chartreuse;
+}
+
+#client-nav{
+    color: #5a5d5a;
+    width: 100%;
+    height: 63.5px;
+    background-color: #000000;
+    border: dashed red;
+}
+
+#client-nav img{
+    width: 100%;
+    border: royalblue dashed;
+}
+
+#main-nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    border: dashed blue;
+}
+
+#user-nav-in-main-nav{
+    width: 30%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #606060;
+    border: dashed darkgoldenrod;
+}
+
+#logo{
+    width: 50px;
+    margin-left: 5px;
+    border: dashed blue;
+}
+
+#user-nav-in-main-nav h1{
+    font-size: 1.7rem;
+    color: white;
+    height: fit-content;
+    align-self: center;
+    font-weight: normal; 
+    border: dashed blue;
+}
+
+#dots-btn{
+    width: 50px;
+    align-self: center;
+    border: dashed blue;
+}
+
+#chat-nav-in-main-nav{
+    width: 70%;
+    height: 100%;
+    background-color: #DEDEDE;
+    border: dashed deeppink;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    border: dashed chartreuse;
+}
+
+#users-in-main{
+    width: 30%;
+    height: 100%;
+    border: dashed darkgoldenrod;
+}
+
+#chat-in-main{
+    width: 70%;
+    height: 100%;
+    border: dashed dodgerblue;
 }
