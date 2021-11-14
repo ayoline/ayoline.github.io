@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    color: white;
 }
 
 body{
@@ -11,7 +12,7 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    border: dashed firebrick;
+    overflow: hidden;
 }
 
 .container{
@@ -20,7 +21,6 @@ body{
     display: flex;
     flex-direction: column;
     margin: auto;
-    border: dashed blue;
 }
 
 header{
@@ -32,7 +32,6 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    border: dashed chartreuse;
 }
 
 #client-nav{
@@ -40,12 +39,10 @@ header{
     width: 100%;
     height: 63.5px;
     background-color: #000000;
-    border: dashed red;
 }
 
 #client-nav img{
     width: 100%;
-    border: royalblue dashed;
 }
 
 #main-nav{
@@ -53,7 +50,6 @@ header{
     height: 60px;
     display: flex;
     flex-direction: row;
-    border: dashed blue;
 }
 
 #user-nav-in-main-nav{
@@ -63,13 +59,11 @@ header{
     flex-direction: row;
     justify-content: space-between;
     background-color: #606060;
-    border: dashed darkgoldenrod;
 }
 
 #logo{
     width: 50px;
     margin-left: 5px;
-    border: dashed blue;
 }
 
 #user-nav-in-main-nav h1{
@@ -78,20 +72,18 @@ header{
     height: fit-content;
     align-self: center;
     font-weight: normal; 
-    border: dashed blue;
 }
 
 #dots-btn{
     width: 50px;
     align-self: center;
-    border: dashed blue;
 }
 
 #chat-nav-in-main-nav{
     width: 70%;
     height: 100%;
+    box-shadow: 0 0 0.3em #F0BD61;
     background-color: #DEDEDE;
-    border: dashed deeppink;
 }
 
 main{
@@ -99,17 +91,160 @@ main{
     height: 100%;
     display: flex;
     flex-direction: row;
-    border: dashed chartreuse;
+    justify-content: space-between;
 }
 
-#users-in-main{
+.users-in-main{
     width: 30%;
-    height: 100%;
-    border: dashed darkgoldenrod;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
-#chat-in-main{
+.user-btn-in-main{
+    background-color: #DEDEDE;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    padding-inline: 10px;
+    flex-direction: row;
+    margin: 2px;
+    justify-content: space-between;
+}
+
+.logo-avatar{
+    width: 50px;
+}
+
+.user-btn-in-main p{
+    color: #606060;
+    font-size: 2rem;
+    font-weight: 500;
+    height: fit-content;
+    align-self: center;
+}
+
+.status-icon{
+    width: 20px;
+}
+
+.chat-in-main{
     width: 70%;
     height: 100%;
-    border: dashed dodgerblue;
+    background-color: #EAEAEA;
+    background-image:  url("../images/alphaChat.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+#modal-chat{
+    width: 70.5%;
+    height: 90.5%;
+    position: fixed;
+    display: flex;
+    z-index: 9999;
+    right: 0%;
+    bottom: 0%;
+    flex-direction: column;
+}
+
+#header-in-modal-chat{
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    display: flex;
+    margin: 0%;
+    flex-direction: row;
+    justify-content: left;
+    box-shadow: 0 0 0.3em #606060;
+}
+
+#header-in-modal-chat img{
+    width: 50px;
+}
+
+#header-in-modal-chat p{
+    color: #606060;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    font-size: 2rem;
+    padding-left: 10px;
+}
+
+#board-in-modal-chat{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+#left-box{
+    width: 50%;
+    height: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#img1{
+    width: 200px;
+}
+
+#img2{
+    width: 300px;
+}
+
+#img3{
+    width: 200px;
+}
+
+#right-box{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} 
+
+#img4{
+    align-self: flex-end;
+    width: 30%;
+}
+
+#img5{
+    align-self: flex-end;
+    width: 80%;
+}
+
+#img6{
+    align-self: flex-end;
+    width: 60%;
+}
+
+#footer-in-modal-char{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#footer-in-modal-char img{
+    width: 30px;
+}
+
+#footer-in-modal-char input{
+    font-size: 1rem;
+    text-indent: 20px;
+    color: #606060;
+    border-radius: 30px;
+    box-shadow: 0 0 0.2em ;
+    width: 75%;
 }
