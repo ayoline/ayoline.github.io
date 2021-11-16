@@ -56,7 +56,7 @@
 
                 <div class="user-btn-in-main">
                     <img class="logo-avatar" src="../images/avatar.svg" alt="image-avatar">
-                    <p>
+                    <p onclick="myFunction('fulano')" id="fulano">
                         Fulano de Tal
                     </p>
                     <img class="status-icon" src="../images/online.svg" alt="image-online">
@@ -118,12 +118,19 @@
 
         </main>
 
+        <script>
+            function myFunction(value) {
+                var x = document.getElementById(value).innerHTML;
+                document.getElementById("contact-name").innerHTML = x;
+            }
+        </script>
+
 
         <div id="modal-chat">
             <div id="header-in-modal-chat">
                 <img src="../images/avatar.svg" alt="image-avatar">
-                <p>
-                    Teste
+                <p id="contact-name">
+
                 </p>
             </div>
             <div id="board-in-modal-chat">
