@@ -1,16 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    background-color: #ffffff ;
+    width: 80vw;
     color: #404040;
+    background-color: #ffffff ;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    width: 98%;
+    max-width: 1920px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .hr-light{
     color: #cadde6;
     background-color: #cadde6;
-    border: solid 2px;
     width: 100%;
+    border: solid 2px;
     padding: 0px;
     margin: 0px;
 }
@@ -18,34 +26,33 @@ body{
 .hr-dark{
     color: #303258;
     background-color: #303258;
-    border: solid 2px;
     width: 100%;
+    border: solid 2px;
     padding: 0px;
     margin: 0px;
 }
 
 header{
-    padding: 1%;
-    flex-direction: column;
-    max-width: 1920px;
     width: 100%;
+    flex-direction: column;
+    padding: 1%;
+    max-width: 1920px;
     margin: auto;
-    box-sizing: border-box;
 }
 
 header .name-image{
+    width: inherit;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: inherit;
-    margin: auto;
     padding: 1%;
+    margin: auto;
 }
 
 .name-image h1{
     color: #303258;
-    font-size: 3em;
     width: inherit;
+    font-size: 3em;
     display: inline-flex;
     flex-direction: column;
     text-align: center;
@@ -61,35 +68,33 @@ h3{
 .name-image img{
     width: 15%;
     height: 15%;
-    margin: auto;
     vertical-align: middle;
     border-radius: 500px;
-    
+    margin: auto;
 }
 
 header .text-career{
+    width: inherit;
+    height: 100%;
     display: table;
     vertical-align: top;
     text-align: center;
-    width: inherit;
-    height: 100%;
     padding: 1%;
-    
 }
 
-.text-career {
+.text-career{
+    color: #000000;
     display: table-cell;
     font-size: 2.5em;
-    color: #000000;
 }
 
 .info-contact{
+    width: inherit;
     display: inline-flex;
     flex-direction: row;
-    width: inherit;
-    margin: auto;
     padding: 1%;
     justify-content: space-between;
+    margin: auto;
 }
 
 .general{
@@ -115,13 +120,12 @@ header .text-career{
 }
 
 main{
+    width: 100%;
     display: flex;
     vertical-align: top;
     padding: 0% 1%;
     flex-direction: row;
-    width: 100%;
     margin: 1%;
-    box-sizing: border-box;
 }
 
 .left-column{
@@ -134,10 +138,9 @@ main{
 .dark-table{
     background-color: #cadde6;
     width: 50%;
-    margin: 0 0;
     vertical-align: top;
     padding: 1%;
-    box-sizing: border-box;
+    margin: 0%;
 }
 
 .texts{
