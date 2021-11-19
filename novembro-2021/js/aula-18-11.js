@@ -11,6 +11,13 @@ link.innerHTML = "Mais informações...";
 link.href = "https://pt.wikipedia.org/wiki/Escalada";
 link.target = "_target";
 document.getElementById('img1-images').src = "../images/aula-18-11/climb1.jpg";
+document.getElementById('link1-images').href = "https://ayoline.github.io/novembro-2021/images/aula-18-11/climb1.jpg";
+
 document.getElementById('img2-images').src = "../images/aula-18-11/climb2.jpg";
+document.getElementById('link2-images').href = "https://ayoline.github.io/novembro-2021/images/aula-18-11/climb2.jpg";
+
 document.getElementById('img3-images').src = "../images/aula-18-11/climb3.jpg";
+document.getElementById('link3-images').href = "https://ayoline.github.io/novembro-2021/images/aula-18-11/climb3.jpg";
+
 document.getElementById('img4-images').src = "../images/aula-18-11/climb4.jpg";
+document.getElementById('link4-images').href = "https://ayoline.github.io/novembro-2021/images/aula-18-11/climb4.jpg";
