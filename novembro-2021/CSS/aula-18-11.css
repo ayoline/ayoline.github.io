@@ -29,12 +29,12 @@ body{
     margin-bottom: 1%;
 }
 
-#h1-in-about-me, #h1-in-my-hobby{
+#h1-in-about-me, #h1-in-my-hobbies{
     color: rgb(17, 145, 5); 
     font-size: 2rem;
 }
 
-#age-in-about-me, #marital-in-about-me, #p1-in-my-hobby{
+#age-in-about-me, #marital-in-about-me, #p1-in-my-hobbies{
     font-size: 1rem;
 }
 
@@ -47,7 +47,7 @@ body{
     border-radius: 150px;
 }
 
-#my-hobby{
+#my-hobbies{
     background-color: rgba(255, 255, 255, 0.589);
     width: 50%;
     padding: 15px;
@@ -58,7 +58,7 @@ body{
     margin-bottom: 1%;
 }
 
-#link-in-my-hobby{
+#link-in-my-hobbies{
     color: blue;
     text-decoration: none;
 }
