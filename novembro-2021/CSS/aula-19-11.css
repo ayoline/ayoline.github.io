@@ -159,6 +159,7 @@ body{
 
 #box-in-info{
     background-color: #a499a8c2;
+    border: solid #ac4c90;
     box-shadow: 0 0 1em rgb(17, 16, 16);
     border-radius: 10px;
 }
