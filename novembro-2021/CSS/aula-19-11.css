@@ -46,6 +46,12 @@ body{
     text-decoration: none;
 }
 
+#titles-in-fixed-navbar a:hover{
+    color: #ac4c90;
+    border-bottom: solid #3b3838;
+    transition: 0.5s;
+}
+
 #initial-image{
     background-color: #cccccc;
     width: 100%;
