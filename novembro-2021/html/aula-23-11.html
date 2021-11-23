@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<!--
+    1. Crie uma página html para receber avaliações de satisfação de um estabelecimento fictício 
+    (dê um nome para o seu estabelecimento). Após submeter o formulário, apresente as respostas do 
+    usuário em um bloco à parte. Estruture o seu trabalho como um projeto (arquivos separados para 
+    html, css e javascript). 
+-->
+
 <html>
 
 <head>
@@ -24,6 +31,42 @@
 
 <body>
 
+    <h1>Restaurante Morte Lenta</h1>
+    <h2>Formulário de satisfação do cliente</h2>
+
+    <main>
+
+        <div id="left-box-in-main">
+            <form enctype="multipart/form-data">
+                <div>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <div>
+                    <label for="age">Idade</label>
+                    <input type="number" name="age" id="age" min="18" max="150" />
+                </div>
+                <label for="comment">Comentário</label>
+                <div>
+                    <textarea name="comment" id="comment" cols="30" rows="5"
+                        placeholder="Diga o que você achou do nosso Restaurante..."></textarea>
+                </div>
+                <button type="submit" onclick="generateCopyForms()">Enviar</button>
+        </div>
+
+        <div id="right-box-in-main">
+            <div id="results">
+            </div>
+        </div>
+
+
+
+        </form>
+    </main>
 
 
     <script type="module" src="../js/aula-23-11.js"></script>

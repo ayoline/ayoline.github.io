@@ -2,10 +2,53 @@
     box-sizing: border-box;
 }
 
-html{
+body{
+    font-family: Poppins ,  sans-serif;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1920px;
+    background-color: #eeeeee;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    margin: 0%;
+    border: black dashed;
+}
+
+body h1{
+    font-size: 3rem;
+}
+
+body h2{
+    font-weight: normal;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    border: blue dashed;
+}
+
+#left-box-in-main{
+    text-align: left;
+    padding-left: 15%;
+    width: 50%;
+    border: deeppink dashed;
+}
+
+#right-box-in-main{
+    width: 50%;
+    border: dimgray dashed;
     
 }
 
-body{
-    font-family: Poppins;
+#results{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding-left: 15%;
+    border: firebrick dashed;
 }
+
