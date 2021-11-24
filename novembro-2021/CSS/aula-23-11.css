@@ -51,3 +51,21 @@ main{
     text-align: left;
 }
 
+.box-rating{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.box-rating p{
+    margin: 0%;
+}
+
+.rating {
+    width: 180px;
+ }
+ 
+ .rating__star {
+    cursor: pointer;
+    color: #1845dab2;
+ }
