@@ -94,6 +94,7 @@ function genCopyForm() {
     removeStars(ratingStars);
 }
 
+// To remove all element childs of a node
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
