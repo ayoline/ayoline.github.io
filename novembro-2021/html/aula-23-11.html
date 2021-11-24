@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://ayoline.github.io/" />
     <meta property="og:title" content="Anderson P. Soares" />
     <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
-    <meta property="og:description" content="Exercício: Página - Animal Favorito, 22-11-21" />
+    <meta property="og:description" content="Exercício: Página - JS - onclick, 23-11-21" />
     <meta property="og:image" content="https://ayoline.github.io/novembro-2021/images/aula-23-11/" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:type" content="image/png" />
@@ -31,31 +31,33 @@
 
 <body>
 
-    <h1>Restaurante Morte Lenta</h1>
-    <h2>Formulário de satisfação do cliente</h2>
+    <h1></h1>
+    <h2></h2>
 
     <main>
 
         <div id="left-box-in-main">
-            <form enctype="multipart/form-data">
+
+            <form>
+
                 <div>
-                    <label for="name">Nome</label>
-                    <input type="text" name="name" id="name" />
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" required />
                 </div>
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" />
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" required />
                 </div>
                 <div>
-                    <label for="age">Idade</label>
-                    <input type="number" name="age" id="age" min="18" max="150" />
+                    <label for="age"></label>
+                    <input type="number" name="age" id="age" min="18" max="150" required />
                 </div>
-                <label for="comment">Comentário</label>
+                <label for="comment"></label>
                 <div>
-                    <textarea name="comment" id="comment" cols="30" rows="5"
+                    <textarea name="comment" id="comment" cols="30" rows="5" required
                         placeholder="Diga o que você achou do nosso Restaurante..."></textarea>
                 </div>
-                <button type="submit" onclick="generateCopyForms()">Enviar</button>
+                <input type="button" onclick="genCopyForm()" value="clicar"></input>
         </div>
 
         <div id="right-box-in-main">
@@ -63,13 +65,11 @@
             </div>
         </div>
 
-
-
         </form>
+
     </main>
 
-
-    <script type="module" src="../js/aula-23-11.js"></script>
+    <script src="../js/aula-23-11.js"></script>
 </body>
 
 </html>

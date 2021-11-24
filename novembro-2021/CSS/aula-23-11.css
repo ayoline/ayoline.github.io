@@ -14,7 +14,6 @@ body{
     left: 0;
     right: 0;
     margin: 0%;
-    border: black dashed;
 }
 
 body h1{
@@ -28,27 +27,27 @@ body h2{
 main{
     display: flex;
     flex-direction: row;
-    border: blue dashed;
 }
 
 #left-box-in-main{
+    width: 50%;
     text-align: left;
     padding-left: 15%;
-    width: 50%;
-    border: deeppink dashed;
+    padding-top: 2%;
 }
 
 #right-box-in-main{
     width: 50%;
-    border: dimgray dashed;
-    
+    padding-left: 15%;
 }
 
 #results{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    vertical-align: baseline;
+    width: fit-content;
     height: 100%;
     text-align: left;
-    padding-left: 15%;
-    border: firebrick dashed;
 }
 
