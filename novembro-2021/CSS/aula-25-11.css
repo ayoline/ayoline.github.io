@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    max-width: 1920px;
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    overflow-x: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: 0%;
+}
+
+main{
+    width: 50%;
+    background-color: #EDF2F4;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #2B2D42;
+    border: thick #8D99AE;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+main h1{
+    font-size: 2.2rem;
+    color: #2B2D42;
+}
+
+main h1 span{
+    color: #EF233C;
+}
+
+main h2{
+    font-size: 1.8rem;
+    font-style: italic;
+    text-decoration: underline;
+    color: #2B2D42;
+}
+
+main h2 span{
+    color: #EF233C;
+}
+
+main h3{
+    font-size: 1.5rem;
+    color: #EF233C;
+}
+
+form{
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#btnShowCart{
+    color: #8D99AE;
+    font-weight: bold;
+    background-color: #EF233C;
+    border: 0px;
+    font-size: 1.3rem;
+    padding: 2%;
+    width: fit-content;
+    border-radius: 10px;
+    margin-top: 5%;
+}
