@@ -92,6 +92,10 @@ main h3{
     color: #EF233C;
 }
 
+main fieldset{
+    border-radius: 10px;
+}
+
 form{
     width: 100%;
     padding: 1%;
