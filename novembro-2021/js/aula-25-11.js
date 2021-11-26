@@ -113,53 +113,69 @@ const btnShowCart = document.querySelector('#btnShowCart');
 btnShowCart.innerHTML = "Finalizar"
 btnShowCart.onclick = function () { calculateHamburguerPrice() };
 
+const printRequest = document.querySelector('#hamburguer-request');
+let totalPrice = 0;
+
 function calculateHamburguerPrice() {
-    let totalPrice;
+    totalPrice = 0;
+    removeAllChildNodes(printRequest);
+    printRequest.style.display = "flex";
+    printRequest.innerHTML = `<h1>Pedido:</h1>`;
 
     if (breadInput_1.checked) {
-        let price = parseFloat(breadInput_1.value);
-        totalPrice = price;
+        genLineRequest(breadInput_1, breadLabel_1);
     } else if (breadInput_2.checked) {
-        let price = parseFloat(breadInput_2.value);
-        totalPrice = price;
+        genLineRequest(breadInput_2, breadLabel_2);
     } else {
-        let price = parseFloat(breadInput_3.value);
-        totalPrice = price;
+        genLineRequest(breadInput_3, breadLabel_3);
     }
 
     if (hamburguerInput_1.checked) {
-        let price = parseFloat(hamburguerInput_1.value);
-        totalPrice += price;
+        genLineRequest(hamburguerInput_1, hamburguerLabel_1);
     } else if (hamburguerInput_2.checked) {
-        let price = parseFloat(hamburguerInput_2.value);
-        totalPrice += price;
+        genLineRequest(hamburguerInput_2, hamburguerLabel_2);
     } else {
-        let price = parseFloat(hamburguerInput_3.value);
-        totalPrice += price;
+        genLineRequest(hamburguerInput_3, hamburguerLabel_3);
     }
 
     if (saladInput_1.checked) {
-        let price = parseFloat(saladInput_1.value);
-        totalPrice += price;
+        genLineRequest(saladInput_1, saladLabel_1);
     } else if (saladInput_2.checked) {
-        let price = parseFloat(saladInput_2.value);
-        totalPrice += price;
+        genLineRequest(saladInput_2, saladLabel_2);
     } else {
-        let price = parseFloat(saladInput_3.value);
-        totalPrice += price;
+        genLineRequest(saladInput_3, saladLabel_3);
     }
 
     if (cheeseInput_1.checked) {
-        let price = parseFloat(cheeseInput_1.value);
-        totalPrice += price;
+        genLineRequest(cheeseInput_1, cheeseLabel_1);
     } else if (cheeseInput_2.checked) {
-        let price = parseFloat(cheeseInput_2.value);
-        totalPrice += price;
+        genLineRequest(cheeseInput_2, cheeseLabel_2);
     } else {
-        let price = parseFloat(cheeseInput_3.value);
-        totalPrice += price;
+        genLineRequest(cheeseInput_3, cheeseLabel_3);
     }
 
-    console.log(totalPrice);
+    printRequest.innerHTML += `<p style="color: #EF233C;">Valor total: R$ ${totalPrice}</p>`;
 
+    printRequest.innerHTML += `<button onclick="removeRequestScreen()">Confirmar</button>`;
+
+    window.scrollTo(0, document.body.scrollHeight);
+
+}
+
+function removeRequestScreen() {
+    printRequest.style.display = "none";
+    window.scrollTo(0, 0);
+}
+
+// To remove all element childs of a node
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+function genLineRequest(productPrice, productText) {
+    let price = parseFloat(productPrice.value);
+    totalPrice += price;
+    printRequest.innerHTML += `<p>${productText.innerHTML}</p>`;
 }
