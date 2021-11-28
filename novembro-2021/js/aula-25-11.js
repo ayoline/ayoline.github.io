@@ -1,5 +1,6 @@
 //document.querySelector('.box-title h1').innerHTML = "Coma mesmo! Burguer";
 //document.querySelector('.box-title h2').innerHTML = "Monte seu Xis!";
+document.querySelector('.box-title div img').src = "../images/aula-25-11/hamburguer.png";
 
 // Radiobtn Bread
 document.querySelector('.box-bread h3').innerHTML = "Escolha o pão:";
@@ -114,56 +115,43 @@ btnShowCart.innerHTML = "Finalizar"
 btnShowCart.onclick = function () { calculateHamburguerPrice() };
 
 const printRequest = document.querySelector('#hamburguer-request');
+const bkgPrintRequest = document.querySelector('#background-hamburguer-request');
 let totalPrice = 0;
 
 function calculateHamburguerPrice() {
     totalPrice = 0;
     removeAllChildNodes(printRequest);
-    printRequest.style.display = "flex";
+
+    bkgPrintRequest.style.display = "block";
+    bkgPrintRequest.style.visibility = "visible";
+    bkgPrintRequest.style.opacity = "1";
+
     printRequest.innerHTML = `<h1>Pedido:</h1>`;
+    printRequest.innerHTML += '<img src="../images/aula-25-11/hamburguer.png"/>';
 
-    if (breadInput_1.checked) {
-        genLineRequest(breadInput_1, breadLabel_1);
-    } else if (breadInput_2.checked) {
-        genLineRequest(breadInput_2, breadLabel_2);
-    } else {
-        genLineRequest(breadInput_3, breadLabel_3);
-    }
+    let allInputs = new Array(breadInput_1, breadInput_2, breadInput_3, hamburguerInput_1,
+        hamburguerInput_2, hamburguerInput_3, saladInput_1, saladInput_2, saladInput_3,
+        cheeseInput_1, cheeseInput_2, cheeseInput_3);
+    let allLabels = new Array(breadLabel_1, breadLabel_2, breadLabel_3, hamburguerLabel_1,
+        hamburguerLabel_2, hamburguerLabel_3, saladLabel_1, saladLabel_2, saladLabel_3,
+        cheeseLabel_1, cheeseLabel_2, cheeseLabel_3);
 
-    if (hamburguerInput_1.checked) {
-        genLineRequest(hamburguerInput_1, hamburguerLabel_1);
-    } else if (hamburguerInput_2.checked) {
-        genLineRequest(hamburguerInput_2, hamburguerLabel_2);
-    } else {
-        genLineRequest(hamburguerInput_3, hamburguerLabel_3);
-    }
-
-    if (saladInput_1.checked) {
-        genLineRequest(saladInput_1, saladLabel_1);
-    } else if (saladInput_2.checked) {
-        genLineRequest(saladInput_2, saladLabel_2);
-    } else {
-        genLineRequest(saladInput_3, saladLabel_3);
-    }
-
-    if (cheeseInput_1.checked) {
-        genLineRequest(cheeseInput_1, cheeseLabel_1);
-    } else if (cheeseInput_2.checked) {
-        genLineRequest(cheeseInput_2, cheeseLabel_2);
-    } else {
-        genLineRequest(cheeseInput_3, cheeseLabel_3);
+    for (let i = 0; i < allInputs.length; i++) {
+        if (allInputs[i].checked) {
+            genLineRequest(allInputs[i], allLabels[i]);
+        }
     }
 
     printRequest.innerHTML += `<p style="color: #EF233C;">Valor total: R$ ${totalPrice}</p>`;
-
     printRequest.innerHTML += `<button onclick="removeRequestScreen()">Confirmar</button>`;
-
-    window.scrollTo(0, document.body.scrollHeight);
+    document.querySelector('body').style = "overflow-y: hidden;";
 
 }
 
 function removeRequestScreen() {
-    printRequest.style.display = "none";
+    bkgPrintRequest.style.visibility = "hidden";
+    bkgPrintRequest.style.opacity = "0";
+    document.querySelector('body').style = "overflow-y: visible;";
     window.scrollTo(0, 0);
 }
 
