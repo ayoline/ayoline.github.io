@@ -130,9 +130,9 @@ form{
 }
 
 #hamburguer-request img{
+    width: 8%;
     align-self: flex-end;
     position: fixed;
-    width: 8%;
 }
 
 #hamburguer-request button{

@@ -112,22 +112,45 @@ cheeseLabel_3.innerHTML = "Cheddar (R$5,00)";
 
 const btnShowCart = document.querySelector('#btnShowCart');
 btnShowCart.innerHTML = "Finalizar"
-btnShowCart.onclick = function () { calculateHamburguerPrice() };
+btnShowCart.onclick = function () { ShowRequest() };
 
 const printRequest = document.querySelector('#hamburguer-request');
 const bkgPrintRequest = document.querySelector('#background-hamburguer-request');
-let totalPrice = 0;
 
-function calculateHamburguerPrice() {
-    totalPrice = 0;
-    removeAllChildNodes(printRequest);
+function ShowRequest() {
+
+    populateRequest();
 
     bkgPrintRequest.style.display = "block";
     bkgPrintRequest.style.visibility = "visible";
     bkgPrintRequest.style.opacity = "1";
 
-    printRequest.innerHTML = `<h1>Pedido:</h1>`;
-    printRequest.innerHTML += '<img src="../images/aula-25-11/hamburguer.png"/>';
+}
+
+function removeRequestScreen() {
+
+    removeAllChildNodes(printRequest);
+
+    bkgPrintRequest.style.visibility = "hidden";
+    bkgPrintRequest.style.opacity = "0";
+    document.querySelector('body').style = "overflow-y: visible;";
+    window.scrollTo(0, 0);
+
+}
+
+// To remove all element childs of a node
+function removeAllChildNodes(parent) {
+
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+
+    }
+
+}
+
+function populateRequest() {
+
+    let totalPrice = 0;
 
     let allInputs = new Array(breadInput_1, breadInput_2, breadInput_3, hamburguerInput_1,
         hamburguerInput_2, hamburguerInput_3, saladInput_1, saladInput_2, saladInput_3,
@@ -136,9 +159,15 @@ function calculateHamburguerPrice() {
         hamburguerLabel_2, hamburguerLabel_3, saladLabel_1, saladLabel_2, saladLabel_3,
         cheeseLabel_1, cheeseLabel_2, cheeseLabel_3);
 
+    printRequest.innerHTML = `<h1>Pedido:</h1>`;
+    printRequest.innerHTML += '<img src="../images/aula-25-11/hamburguer.png"/>';
+
+
     for (let i = 0; i < allInputs.length; i++) {
         if (allInputs[i].checked) {
-            genLineRequest(allInputs[i], allLabels[i]);
+            let price = parseFloat(allInputs[i].value);
+            totalPrice += price;
+            printRequest.innerHTML += `<p>${allLabels[i].innerHTML}</p>`;
         }
     }
 
@@ -146,24 +175,4 @@ function calculateHamburguerPrice() {
     printRequest.innerHTML += `<button onclick="removeRequestScreen()">Confirmar</button>`;
     document.querySelector('body').style = "overflow-y: hidden;";
 
-}
-
-function removeRequestScreen() {
-    bkgPrintRequest.style.visibility = "hidden";
-    bkgPrintRequest.style.opacity = "0";
-    document.querySelector('body').style = "overflow-y: visible;";
-    window.scrollTo(0, 0);
-}
-
-// To remove all element childs of a node
-function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-}
-
-function genLineRequest(productPrice, productText) {
-    let price = parseFloat(productPrice.value);
-    totalPrice += price;
-    printRequest.innerHTML += `<p>${productText.innerHTML}</p>`;
 }
