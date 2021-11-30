@@ -3,11 +3,11 @@
 }
 
 body{
+    color: #151616;
+    background-color: #EDF2F4;;
     width: 100vw;
     height: 130vh;
     max-width: 1920px;
-    color: #151616;
-    background-color: #EDF2F4;;
     font-family: Roboto, sans-serif;
     overflow-x: hidden;
     text-align: center;
@@ -28,13 +28,13 @@ main{
 }
 
 #options{
-    width: 100%;
     background-color: #EDF2F4;
+    box-shadow: 3px 3px 10px #2B2D42;
+    width: 100%;
     padding: 1%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    box-shadow: 3px 3px 10px #2B2D42;
 }
 
 #options div{
@@ -74,13 +74,13 @@ main{
 }
 
 #btn-start{
-    font-size: 1.3rem;
-    width: 15%;
-    border: 0px;
-    height: fit-content;
-    font-weight: bold;
     background-color: #F2EA27;
+    width: 15%;
+    height: fit-content;
+    font-size: 1.3rem;
+    border: 0px;
     align-self: center;
+    font-weight: bold;
     padding: 1%;
     border-radius: 10px;
 }
@@ -96,11 +96,11 @@ main{
 }
 
 #textbox-in-chalkboard{
-    font-size: 1.4rem;
     color: #F2EA27;
-    display: flex;
-    flex-direction: column;
     width: 70%;
     height: 95%;
-    border: tomato dashed;
+    font-size: 1.4rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }

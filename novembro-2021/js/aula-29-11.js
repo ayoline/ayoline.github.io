@@ -17,49 +17,49 @@ inputCount.step = 1;
 const btnStart = document.querySelector('#btn-start');
 btnStart.innerHTML = "Começar!";
 btnStart.onclick = function () { startWriteFrase(inputFrase, inputCount) };
-
 let textBoard = document.querySelector('#textbox-in-chalkboard');
 
 function startWriteFrase(element, count) {
 
     removeAllChildNodes(textBoard);
-    num = 1;
+    let num = 1;
     let textArray = element.value;
     let countValue = count.value;
-    console.log(countValue);
-    console.log(element.value.length);
+    let repeatCount = 0;
+    let eraseCount = 0;
 
-    //for (let a = 0; a < countValue; a++) {
+    console.log(textArray);
     while (num <= countValue) {
+
 
         for (let i = 0; i < element.value.length; i++) {
             console.log("i: " + i);
             let letter = textArray.charAt(i);
-            setTimeout(() => textBoard.innerHTML += letter, 75 * i);
-            console.log(letter);
-        }
+            //setTimeout(() => {
+            textBoard.innerHTML += letter;
+            // }, 75 * i);
 
+        }
         textBoard.innerHTML += `<br>`;
 
-        num++;
+        if (repeatCount > 10) {
+            repeatCount = 0;
+            eraseCount += 1;
+            removeAllChildNodes(textBoard);
+        }
 
+        repeatCount++;
+        num++;
     }
 
-    // }
-    //textArray.forEach((letter, i) => {
-    //    setTimeout(() => {
-    //        textBoard.innerHTML += letter;
-    //    }, 75 * i);
-    //});
+    textBoard.innerHTML += `<br><br><p>O número de linhas digitado foi: ${countValue} vezes`;
+    textBoard.innerHTML += `<br><br><p>O Quadro foi apagado: ${eraseCount} vezes`;
 
 }
-//textBoard.innerHTML += `<p>${inputFrase.value}</p>`;
-
 function removeAllChildNodes(parent) {
 
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
-
     }
 
 }
