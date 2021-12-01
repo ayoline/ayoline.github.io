@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<!--
+        1. Os amigos Pedro, Juca e Edna são fanáticos por corridas automobilísticas e resolveram 
+    criar um joguinho em javascript para fazerem apostas entre si.
+    Cada carrinho possui 3 atributos:
+
+        a. Velocidade máxima;
+        b. Velocidade mínima;
+        c. Derrapagem (%);
+
+    O vencedor da corrida é determinado pelo carrinho que terminar mais vezes em primeiro lugar.
+
+    A fórmula para determinar quem ganhou cada volta é a seguinte:
+
+    Sortear, utilizando o Math.random(), um número entre a Velocidade mínima e a Velocidade máxima, 
+    em seguida deve-se subtrair o percentual de derrapagem. O carro com o maior valor vence a volta.
+
+    O carro do Pedro foi configurado da seguinte forma:
+    Velocidade Mínima: 150 km/h
+    Velocidade Máxima: 230 km/h
+    Derrapagem: 3%
+
+    O carro do Juca foi configurado da seguinte forma:
+    Velocidade Mínima: 120 km/h
+    Velocidade Máxima: 260 km/h
+    Derrapagem: 5%
+
+    O carro da Edna foi configurado da seguinte forma:
+    Velocidade Mínima: 180 km/h
+    Velocidade Máxima: 220 km/h
+    Derrapagem: 1%
+
+    Regras:
+        a. O jogo possui 3 modos de corrida previamente programadas: Corrida rápida (10 voltas), Grande 
+    Prêmio (70 voltas) e Enduro (160 voltas).
+        b. Utilizar a estrutura de repetição “for” para as corridas.
+
+    Desafio opcional: Gerar os 3 carrinhos de forma aleatória respeitando as seguintes regras:
+    Velocidade mínima (Min.: 100 e Máx.: 150), Velocidade máxima (Min.: 200 e Máx.: 280) e 
+    Derrapagem (Min.: 1% e Máx.: 8%).
+
+    Desafio opcional 2: Determinar através de um formulário, o número de voltas da corrida.
+    Criterio de desempate: os carros em empate irão rodar mais uma volta para decidir o ganhador.
+-->
+
+<html>
+
+<head>
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayoline.github.io/" />
+    <meta property="og:title" content="Anderson P. Soares" />
+    <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
+    <meta property="og:description" content="Exercício: While - JS - Bart simpson, 29-11-21" />
+    <meta property="og:image" content="https://ayoline.github.io/novembro-2021/images/aula-30-11/" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/aula-30-11.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1></h1>
+
+        <div id="entire-box">
+
+            <section id="section-left-in-entire-box">
+
+                <div id="titles-in-section-left">
+
+                    <h2></h2>
+
+                    <div id="players-in-section-left">
+
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+
+                </div>
+
+                <div id="main-board-in-section-left">
+
+                    <div id="board-players-in-main-board">
+
+                        <div id="pedro-box"></div>
+                        <div id="juca-box"></div>
+                        <div id="edna-box"></div>
+
+                    </div>
+
+                    <div id="board-result-in-main-board">
+
+                        <h2></h2>
+                        <p id="final-result"></p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section id="section-right-in-entire-box">
+
+                <button id="btn-start"></button>
+
+                <div id="modes-in-section-right">
+
+                    <input id="fast-mode" />
+                    <label></label>
+                    <input id="pro-mode" />
+                    <label></label>
+                    <input id="enduro-mode" />
+                    <label></label>
+
+                </div>
+
+                <div id="board-rules-in-section-right">
+
+                    <h2></h2>
+                    <p></p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="../js/aula-30-11.js"></script>
+</body>
+
+</html>
