@@ -4,13 +4,13 @@
         Utilizando o conceito de matrizes, elabore uma página html para o jogo da velha. 
 
     Regras: 
-    
+
     a. O jogo possui dois jogadores “O” e “X”; 
     b. O jogador “O” sempre inicia a partida; 
     c. Condições de vitória: Uma linha inteira, uma coluna inteira ou uma diagonal inteira preenchidos com “O” ou “X”. 
-    
+
     Exemplo da Matriz: 
-    
+
     [ 
        [“Posição 0x0”, ”Posição 0x1”, ”Posição 0x2”], 
        [“Posição 1x0”, “Posição 1x1”, “Posição 1x2”], 
@@ -40,6 +40,33 @@
 
 <body>
 
+    <main>
+
+        <h1></h1>
+
+        <button id="btn-start"></button>
+
+        <div id="box-board">
+            <div class="line">
+                <div class="field" id="field1"></div>
+                <div class="field" id="field2"></div>
+                <div class="field" id="field3"></div>
+            </div>
+            <div class="line">
+                <div class="field" id="field4"></div>
+                <div class="field" id="field5"></div>
+                <div class="field" id="field6"></div>
+            </div>
+            <div class="line">
+                <div class="field" id="field7"></div>
+                <div class="field" id="field8"></div>
+                <div class="field" id="field9"></div>
+            </div>
+        </div>
+
+        <div id="result"></div>
+
+    </main>
 
     <script src="../js/aula-02-12.js"></script>
 </body>
