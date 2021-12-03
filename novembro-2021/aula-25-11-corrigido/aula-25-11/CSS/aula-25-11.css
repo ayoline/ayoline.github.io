@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    max-width: 1920px;
+    color: #2B2D42;
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    overflow-x: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: 0%;
+}
+
+main{
+    width: 50%;
+    background-color: #EDF2F4;
+    box-shadow: 3px 3px 10px #2B2D42;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: thick #8D99AE;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-inline: auto;
+}
+
+main h1{
+    color: #2B2D42;
+    font-size: 2.2rem;
+}
+
+.box-title div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box-title div img{
+    width: 18%;
+    padding: 1%;
+    align-self: center;
+    height: fit-content;
+}
+
+main h1 span{
+    color: #EF233C;
+}
+
+main h2{
+    color: #2B2D42;
+    font-size: 1.8rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+main h2 span{
+    color: #EF233C;
+}
+
+main h3{
+    font-size: 1.5rem;
+    color: #EF233C;
+}
+
+main fieldset{
+    border-color: #8D99AE;
+    border-radius: 10px;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#btnShowCart{
+    width: fit-content;
+    color: #8D99AE;
+    background-color: #EF233C;
+    font-weight: bold;
+    border: 0px;
+    font-size: 1.3rem;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+#background-hamburguer-request{
+    width: 100%;
+    height:100%;
+    background-color: white;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s ease;
+    top: 0px;
+    left: 0px;
+}
+
+#hamburguer-request{
+    width: 50%;
+    height: fit-content;
+    background-color: #EDF2F4;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #2B2D42;
+    margin-top: 2%;
+    border: thick #8D99AE;
+    margin-inline: auto;
+}
+
+#hamburguer-request h1{
+    font-size: 2rem;
+}
+
+#hamburguer-request p{
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+#hamburguer-request img{
+    width: 8%;
+    align-self: flex-end;
+    position: fixed;
+}
+
+#hamburguer-request button{
+    width: fit-content;
+    color: #8D99AE;
+    background-color: #EF233C;
+    font-weight: bold;
+    border: 0px;
+    font-size: 1.3rem;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 5%;
+}
