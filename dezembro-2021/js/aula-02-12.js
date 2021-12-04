@@ -4,20 +4,22 @@ panel.innerHTML = `<p>Clique no botão para iniciar a partida</p>`
 
 const btnStart = document.querySelector('#btn-start');
 btnStart.innerHTML = "Jogar";
+
+let whoIsNext = 0;
+let winner = "";
+
 btnStart.onclick = function () {
     resetBoard();
     whoIsNext = 1;
     btnStart.innerHTML = "Reiniciar";
     panel.innerHTML = `<p>Jogada: Player ${whoIsNext}</p>`
-};
+}
+
 document.querySelectorAll('.field').forEach(item => {
     item.addEventListener('click', event => {
         nextMove(item);
     })
 })
-
-let whoIsNext = 0;
-let winner = "";
 
 function nextMove(element) {
     console.log(element);

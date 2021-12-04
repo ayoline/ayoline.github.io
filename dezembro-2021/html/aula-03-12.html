@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<!--
+    
+        Os amigos Pedro e Juca não se conformaram, pois o carrinho da Edna ganhava a maioria das 
+    corridas no joguinho que desenvolveram, então eles tiveram uma ideia para resolver este problema: 
+    gerar os carrinhos de forma aleatória. 
+
+    Então elaboraram as seguintes regras: 
+
+    Cada carrinho gerado pode ser de uma das 3 raridades abaixo: 
+
+    a. Popular: 60% de chances; 
+    b. Sport: 35% de chances; 
+    c. Super Sport: 5% de chances; 
+
+    Cada carrinho possui 3 atributos: 
+
+    a. Velocidade máxima; 
+    • Popular: Min.: 180 km/h | Máx.: 200 km/h 
+    • Sport: Min.: 195 km/h | Máx.: 215 km/h 
+    • Super Sport: Min.: 210 km/h | Máx.: 230 km/h 
+
+    b. Velocidade mínima; 
+    • Popular: Min.: 110 km/h | Máx.: 130 km/h 
+    • Sport: Min.: 125 km/h | Máx.: 145 km/h 
+    • Super Sport: Min.: 140 km/h | Máx.: 160 km/h 
+
+    c. Derrapagem (%); 
+    • Popular: Min.: 3% | Máx.: 4% 
+    • Sport: Min.: 2% | Máx.: 3% 
+    • Super Sport: Min.: 1%| Máx.: 1.75% 
+
+    Os carrinhos de Pedro, Juca e Edna devem ser gerados de forma aleatória e respeitando as regras 
+    de montagem acima citadas. 
+
+    O vencedor da corrida é determinado pelo carrinho que terminar mais vezes em primeiro lugar
+
+    A fórmula para determinar quem ganhou cada volta é a seguinte: 
+    Sortear, utilizando o Math.random(), um número entre a Velocidade mínima e a Velocidade máxima, 
+    em seguida deve-se subtrair o percentual de derrapagem. O carro com o maior valor vence a volta. 
+
+    Regras: 
+
+    a. O jogo possui 3 modos de corrida previamente programadas: Corrida rápida (10 voltas), 
+    Grande Prêmio (70 voltas) e Enduro (160 voltas). 
+    b. Utilizar objetos para o armazenamento dos dados dos carros. 
+
+    Desafio opcional: Permitir que cada jogador crie até 5 carros e possa escolher qual carro 
+    participará daquela corrida. 
+    Desafio opcional 2: Determinar através de um formulário, o número de voltas da corrida.   
+
+-->
+
+<html>
+
+<head>
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayoline.github.io/" />
+    <meta property="og:title" content="Anderson P. Soares" />
+    <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
+    <meta property="og:description" content="Exercício: JS - Corrida+, 03-12-21" />
+    <meta property="og:image" content="https://ayoline.github.io/dezembro-2021/images/aula-03-12/" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/aula-03-12.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1></h1>
+
+        <div id="entire-box">
+
+            <section id="section-left-in-entire-box">
+
+                <div id="titles-in-section-left">
+
+                    <h2></h2>
+
+                    <div id="players-in-section-left">
+
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+
+                </div>
+
+                <div id="main-board-in-section-left">
+
+                    <div id="board-players-in-main-board">
+
+                        <div id="pedro-box"></div>
+                        <div id="juca-box"></div>
+                        <div id="edna-box"></div>
+
+                    </div>
+
+                    <div id="board-result-in-main-board">
+
+                        <h2></h2>
+                        <p id="final-result"></p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section id="section-right-in-entire-box">
+
+                <button id="btn-start"></button>
+
+                <div id="modes-in-section-right">
+
+                    <input id="fast-mode" />
+                    <label></label>
+                    <input id="pro-mode" />
+                    <label></label>
+                    <input id="enduro-mode" />
+                    <label></label>
+
+                </div>
+
+                <div id="board-rules-in-section-right">
+
+                    <h2></h2>
+                    <p></p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="../js/aula-03-12.js"></script>
+</body>
+
+</html>
