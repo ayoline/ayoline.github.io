@@ -8,6 +8,7 @@ document.querySelector('#board-rules-in-section-right h2').innerHTML = "Regras";
 const rules = document.querySelector('#board-rules-in-section-right p');
 rules.innerHTML = "O vencedor da corrida é determinado pelo carrinho que terminar mais vezes em primeiro lugar."
 rules.innerHTML += `<br><br>Ou seja, Ganha quem vencer O_o.`;
+rules.innerHTML += '<br><br>*Limite de voltas: 50.000'
 
 const fastMode = document.querySelector('#fast-mode');
 fastMode.type = "radio";
@@ -34,41 +35,50 @@ const enduroModeLabel = document.querySelectorAll('#modes-in-section-right label
 enduroModeLabel.htmlFor = "enduro-mode";
 enduroModeLabel.innerHTML = "Enduro";
 
+const customMode = document.querySelector('#custom-mode');
+customMode.type = "radio";
+customMode.name = "mode";
+customMode.value = 0;
+const customModeform = document.querySelectorAll('#modes-in-section-right input')[4];
+customModeform.type = "number";
+customModeform.value = 0;
+customModeform.placeholder = "Qtde de voltas";
+customModeform.htmlFor = "custom-mode";
+customModeform.innerHTML = "Custom";
+
 const btnStart = document.querySelector('#btn-start');
 btnStart.innerHTML = "Começar";
 btnStart.onclick = function () { startRace() };
 
-let pedroBox = document.querySelector('#pedro-box');
-let jucaBox = document.querySelector('#juca-box');
-let ednaBox = document.querySelector('#edna-box');
-let pedroCount = 0;
-let jucaCount = 0;
-let ednaCount = 0;
+let boxPanel = new Array;
+boxPanel.push(document.querySelector('#pedro-box'));
+boxPanel.push(document.querySelector('#juca-box'));
+boxPanel.push(document.querySelector('#edna-box'));
 
 const cars = [
     {
-        id: 0,
         name: 'Carro do Pedro',
         type: '',
         velMin: 0,
         velMax: 0,
         carSkid: 0,
+        wins: 0,
     },
     {
-        id: 1,
         name: 'Carro do Juca',
         type: '',
         velMin: 0,
         velMax: 0,
         carSkid: 0,
+        wins: 0,
     },
     {
-        id: 2,
         name: 'Carro da Edna',
         type: '',
         velMin: 0,
         velMax: 0,
         carSkid: 0,
+        wins: 0,
     }
 ]
 
@@ -87,12 +97,22 @@ function startRace() {
             resultOfEachLap();
         }
         whoIsChampion();
-    } else {
+    } else if (enduroMode.checked) {
         for (let i = 0; i < enduroMode.value; i++) {
             resultOfEachLap();
         }
         whoIsChampion();
+    } else if (customMode.checked) {
+        if (customModeform.value > 0 && customModeform.value <= 50000) {
+            for (let i = 0; i < customModeform.value; i++) {
+                resultOfEachLap();
+            }
+            whoIsChampion();
+        } else {
+            resetAll();
+        }
     }
+
 }
 
 function resultOfEachLap() {
@@ -106,11 +126,11 @@ function resultOfEachLap() {
     ednaVel = ednaVel - ((cars[2].carSkid / 100) * ednaVel);
 
     if (pedroVel > JucaVel && pedroVel > ednaVel) {
-        pedroCount++;
+        cars[0].wins++;
     } else if (JucaVel > pedroVel && JucaVel > ednaVel) {
-        jucaCount++;
+        cars[1].wins++;
     } else {
-        ednaCount++;
+        cars[2].wins++;
     }
 
 }
@@ -123,20 +143,25 @@ function generateCars() {
             cars[i].velMin = getRandomIntInclusive(110, 130);
             cars[i].velMax = getRandomIntInclusive(180, 200);
             cars[i].carSkid = (Math.random() * (3 - 4) + 4).toFixed(2);
-            console.log(cars[i]);
         } else if (whatIsTheCar > 60 && whatIsTheCar <= 95) {
             cars[i].type = "Sport";
             cars[i].velMin = getRandomIntInclusive(125, 145);
             cars[i].velMax = getRandomIntInclusive(195, 215);
             cars[i].carSkid = (Math.random() * (2 - 3) + 3).toFixed(2);
-            console.log(cars[i]);
         } else {
             cars[i].type = "Super Sport";
             cars[i].velMin = getRandomIntInclusive(140, 160);
             cars[i].velMax = getRandomIntInclusive(210, 230);
             cars[i].carSkid = (Math.random() * (1 - 1.75) + 1.75).toFixed(2);
-            console.log(cars[i]);
         }
+
+        boxPanel[i].innerHTML += `<br><p style="color: #055D91;font-weight: bold;" >${cars[i].name}</p>`;
+        boxPanel[i].innerHTML += `<p>Tipo: ${cars[i].type}</p>`;
+        boxPanel[i].innerHTML += `<p>Velocidade:</p>`;
+        boxPanel[i].innerHTML += `<p>Min: ${cars[i].velMin} km/h</p>`;
+        boxPanel[i].innerHTML += `<p>Max: ${cars[i].velMax} km/h</p>`;
+        boxPanel[i].innerHTML += `<p>Derrapagem: ${cars[i].carSkid}%</p>`;
+
     }
 }
 
@@ -158,20 +183,22 @@ function removeAllChildNodes(parent) {
 
 function whoIsChampion() {
 
-    pedroBox.innerHTML += `<p>Venceu:</p>`
-    pedroBox.innerHTML += `<p>${pedroCount} corridas</p>`
+    let pedroWins = cars[0].wins;
+    let jucaWins = cars[1].wins;
+    let ednaWins = cars[2].wins;
 
-    jucaBox.innerHTML += `<p>Venceu:</p>`
-    jucaBox.innerHTML += `<p>${jucaCount} corridas</p>`
+    for (let i = 0; i < cars.length; i++) {
 
-    ednaBox.innerHTML += `<p>Venceu:</p>`
-    ednaBox.innerHTML += `<p>${ednaCount} corridas</p>`
+        boxPanel[i].innerHTML += `<br><p style="color: #055D91;font-weight: bold;">Venceu:</p>`
+        boxPanel[i].innerHTML += `<p>${cars[i].wins} corridas</p>`
 
-    if (pedroCount > jucaCount && pedroCount > ednaCount) {
+    }
+
+    if (pedroWins > jucaWins && pedroWins > ednaWins) {
         document.querySelector('#final-result').innerHTML = "Pedro é o Campeão!"
-    } else if (jucaCount > pedroCount && jucaCount > ednaCount) {
+    } else if (jucaWins > pedroWins && jucaWins > ednaWins) {
         document.querySelector('#final-result').innerHTML = "Juca é o Campeão!"
-    } else if (ednaCount > pedroCount && ednaCount > jucaCount) {
+    } else if (ednaWins > pedroWins && ednaWins > jucaWins) {
         document.querySelector('#final-result').innerHTML = "Edna é a Campeã!"
     } else {
         document.querySelector('#final-result').innerHTML = "Empate!"
@@ -180,12 +207,9 @@ function whoIsChampion() {
 
 function resetAll() {
 
-    removeAllChildNodes(pedroBox);
-    removeAllChildNodes(jucaBox);
-    removeAllChildNodes(ednaBox);
-
-    pedroCount = 0;
-    jucaCount = 0;
-    ednaCount = 0;
+    for (let i = 0; i < boxPanel.length; i++) {
+        removeAllChildNodes(boxPanel[i]);
+        cars[i].wins = 0;
+    }
 
 }
