@@ -11,7 +11,7 @@ body{
     max-height: 1080px;
     font-family: 'Roboto Slab', serif;
     overflow-x: hidden;
-    
+    overflow-y: hidden;
     display: flex;
     flex-direction: row;
     justify-content: center;
