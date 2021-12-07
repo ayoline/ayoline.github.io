@@ -13,7 +13,6 @@ rules.innerHTML += '<br><br>*Limite de voltas: 50.000'
 const fastMode = document.querySelector('#fast-mode');
 fastMode.type = "radio";
 fastMode.name = "mode";
-fastMode.value = 10;
 fastMode.checked = true;
 const fastModeLabel = document.querySelectorAll('#modes-in-section-right label')[0];
 fastModeLabel.htmlFor = "fast-mode";
@@ -22,7 +21,6 @@ fastModeLabel.innerHTML = "Corrida rápida";
 const proMode = document.querySelector('#pro-mode');
 proMode.type = "radio";
 proMode.name = "mode";
-proMode.value = 70;
 const proModeLabel = document.querySelectorAll('#modes-in-section-right label')[1];
 proModeLabel.htmlFor = "pro-mode";
 proModeLabel.innerHTML = "Grande Prêmio";
@@ -30,7 +28,6 @@ proModeLabel.innerHTML = "Grande Prêmio";
 const enduroMode = document.querySelector('#enduro-mode');
 enduroMode.type = "radio";
 enduroMode.name = "mode";
-enduroMode.value = 160;
 const enduroModeLabel = document.querySelectorAll('#modes-in-section-right label')[2];
 enduroModeLabel.htmlFor = "enduro-mode";
 enduroModeLabel.innerHTML = "Enduro";
@@ -83,22 +80,21 @@ const cars = [
 ]
 
 function startRace() {
-
     resetAll();
     generateCars();
 
     if (fastMode.checked) {
-        for (let i = 0; i < fastMode.value; i++) {
+        for (let i = 0; i < 10; i++) {
             resultOfEachLap();
         }
         whoIsChampion();
     } else if (proMode.checked) {
-        for (let i = 0; i < proMode.value; i++) {
+        for (let i = 0; i < 70; i++) {
             resultOfEachLap();
         }
         whoIsChampion();
     } else if (enduroMode.checked) {
-        for (let i = 0; i < enduroMode.value; i++) {
+        for (let i = 0; i < 160; i++) {
             resultOfEachLap();
         }
         whoIsChampion();
@@ -112,11 +108,9 @@ function startRace() {
             resetAll();
         }
     }
-
 }
 
 function resultOfEachLap() {
-
     let pedroVel = getRandomIntInclusive(cars[0].velMin, cars[0].velMax);
     let JucaVel = getRandomIntInclusive(cars[1].velMin, cars[1].velMax);
     let ednaVel = getRandomIntInclusive(cars[2].velMin, cars[2].velMax);
@@ -132,7 +126,6 @@ function resultOfEachLap() {
     } else {
         cars[2].wins++;
     }
-
 }
 
 function generateCars() {
@@ -161,37 +154,29 @@ function generateCars() {
         boxPanel[i].innerHTML += `<p>Min: ${cars[i].velMin} km/h</p>`;
         boxPanel[i].innerHTML += `<p>Max: ${cars[i].velMax} km/h</p>`;
         boxPanel[i].innerHTML += `<p>Derrapagem: ${cars[i].carSkid}%</p>`;
-
     }
 }
 
 function getRandomIntInclusive(min, max) {
-
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-
 }
 
 function removeAllChildNodes(parent) {
-
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
-
 }
 
 function whoIsChampion() {
-
     let pedroWins = cars[0].wins;
     let jucaWins = cars[1].wins;
     let ednaWins = cars[2].wins;
 
     for (let i = 0; i < cars.length; i++) {
-
         boxPanel[i].innerHTML += `<br><p style="color: #055D91;font-weight: bold;">Venceu:</p>`
         boxPanel[i].innerHTML += `<p>${cars[i].wins} corridas</p>`
-
     }
 
     if (pedroWins > jucaWins && pedroWins > ednaWins) {
@@ -206,10 +191,8 @@ function whoIsChampion() {
 }
 
 function resetAll() {
-
     for (let i = 0; i < boxPanel.length; i++) {
         removeAllChildNodes(boxPanel[i]);
         cars[i].wins = 0;
     }
-
 }
