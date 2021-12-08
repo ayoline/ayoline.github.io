@@ -52,6 +52,27 @@ boxPanel.push(document.querySelector('#pedro-box'));
 boxPanel.push(document.querySelector('#juca-box'));
 boxPanel.push(document.querySelector('#edna-box'));
 
+const carModels = [
+    {
+        type: 'Popular',
+        velMin: { min: 110, max: 130 },
+        velMax: { min: 180, max: 200 },
+        carSkid: { min: 3, max: 4 },
+    },
+    {
+        type: 'Sport',
+        velMin: { min: 125, max: 145 },
+        velMax: { min: 195, max: 215 },
+        carSkid: { min: 2, max: 3 },
+    },
+    {
+        type: 'Super Sport',
+        velMin: { min: 140, max: 160 },
+        velMax: { min: 210, max: 230 },
+        carSkid: { min: 1, max: 1.75 },
+    }
+]
+
 const cars = [
     {
         name: 'Carro do Pedro',
@@ -132,20 +153,20 @@ function generateCars() {
     for (let i = 0; i < cars.length; i++) {
         let whatIsTheCar = getRandomIntInclusive(1, 100);
         if (whatIsTheCar <= 60) {
-            cars[i].type = "Popular";
-            cars[i].velMin = getRandomIntInclusive(110, 130);
-            cars[i].velMax = getRandomIntInclusive(180, 200);
-            cars[i].carSkid = (Math.random() * (3 - 4) + 4).toFixed(2);
+            cars[i].type = carModels[0].type;
+            cars[i].velMin = getRandomIntInclusive(carModels[0].velMin.min, carModels[0].velMin.max);
+            cars[i].velMax = getRandomIntInclusive(carModels[0].velMax.min, carModels[0].velMax.max);
+            cars[i].carSkid = (Math.random() * (carModels[0].carSkid.max - carModels[0].carSkid.min) + carModels[0].carSkid.min).toFixed(2);
         } else if (whatIsTheCar > 60 && whatIsTheCar <= 95) {
-            cars[i].type = "Sport";
-            cars[i].velMin = getRandomIntInclusive(125, 145);
-            cars[i].velMax = getRandomIntInclusive(195, 215);
-            cars[i].carSkid = (Math.random() * (2 - 3) + 3).toFixed(2);
+            cars[i].type = carModels[1].type;
+            cars[i].velMin = getRandomIntInclusive(carModels[1].velMin.min, carModels[1].velMin.max);
+            cars[i].velMax = getRandomIntInclusive(carModels[1].velMax.min, carModels[1].velMax.max);
+            cars[i].carSkid = (Math.random() * (carModels[1].carSkid.max - carModels[1].carSkid.min) + carModels[1].carSkid.min).toFixed(2);
         } else {
-            cars[i].type = "Super Sport";
-            cars[i].velMin = getRandomIntInclusive(140, 160);
-            cars[i].velMax = getRandomIntInclusive(210, 230);
-            cars[i].carSkid = (Math.random() * (1 - 1.75) + 1.75).toFixed(2);
+            cars[i].type = carModels[2].type;
+            cars[i].velMin = getRandomIntInclusive(carModels[2].velMin.min, carModels[2].velMin.max);
+            cars[i].velMax = getRandomIntInclusive(carModels[2].velMax.min, carModels[2].velMax.max);
+            cars[i].carSkid = (Math.random() * (carModels[2].carSkid.max - carModels[2].carSkid.min) + carModels[2].carSkid.min).toFixed(2);
         }
 
         boxPanel[i].innerHTML += `<br><p style="color: #055D91;font-weight: bold;" >${cars[i].name}</p>`;
@@ -161,12 +182,6 @@ function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
 }
 
 function whoIsChampion() {
@@ -194,5 +209,11 @@ function resetAll() {
     for (let i = 0; i < boxPanel.length; i++) {
         removeAllChildNodes(boxPanel[i]);
         cars[i].wins = 0;
+    }
+}
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
     }
 }
