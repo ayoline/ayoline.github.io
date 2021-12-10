@@ -47,7 +47,7 @@ const btnStart = document.querySelector('#btn-start');
 btnStart.innerHTML = "Começar";
 btnStart.onclick = function () { startRace() };
 
-let boxPanel = new Array;
+let boxPanel = [];
 boxPanel.push(document.querySelector('#pedro-box'));
 boxPanel.push(document.querySelector('#juca-box'));
 boxPanel.push(document.querySelector('#edna-box'));
@@ -117,18 +117,16 @@ const players = [
 
 function startRace() {
     resetAll();
-    generateCars();
+    const array = [0, 1, 2];
+    array.forEach(function (item) {
+        generateSortCars(item);
+    });
+    //generateSortCars();
 
     if (fastMode.checked) {
-
-        const a = ["a", "b", "c"];
-        a.forEach((element) => {
-            console.log(element);
-        });
-
-        //for (let i = 0; i < 10; i++) {
-        //    resultOfEachLap();
-        //}
+        for (let i = 0; i < 10; i++) {
+            resultOfEachLap();
+        }
         whoIsChampion();
     } else if (proMode.checked) {
         for (let i = 0; i < 70; i++) {
@@ -195,30 +193,21 @@ function resultOfEachLap() {
     }
 }
 
-function generateCars() {
-    for (let i = 0; i < players.length; i++) {
-        let whatIsTheCar = getRandomIntInclusive(1, 100);
-        if (whatIsTheCar <= 60) {
-            players[i].car.type = carModels.popular.type;
-            //players[i].car.type = carModels.popular.type;
-            //players[i].car.velMin = getRandomIntInclusive(carModels.popular.velMin.min, carModels.popular.velMin.max);
-            //players[i].car.velMax = getRandomIntInclusive(carModels.popular.velMax.min, carModels.popular.velMax.max);
-            //players[i].car.carSkid = (Math.random() * (carModels.popular.carSkid.max - carModels.popular.carSkid.min) + carModels.popular.carSkid.min).toFixed(2);
-            showCarByLevel(carModels.popular, players[i].id);
-        } else if (whatIsTheCar > 60 && whatIsTheCar <= 95) {
-            players[i].car.type = carModels.sport.type;
-            //players[i].car.velMin = getRandomIntInclusive(carModels.sport.velMin.min, carModels.sport.velMin.max);
-            //players[i].car.velMax = getRandomIntInclusive(carModels.sport.velMax.min, carModels.sport.velMax.max);
-            //players[i].car.carSkid = (Math.random() * (carModels.sport.carSkid.max - carModels.sport.carSkid.min) + carModels.sport.carSkid.min).toFixed(2);
-            showCarByLevel(carModels.sport, players[i].id);
-        } else {
-            players[i].car.type = carModels.superSport.type;
-            //players[i].car.velMin = getRandomIntInclusive(carModels.superSport.velMin.min, carModels.superSport.velMin.max);
-            //players[i].car.velMax = getRandomIntInclusive(carModels.superSport.velMax.min, carModels.superSport.velMax.max);
-            //players[i].car.carSkid = (Math.random() * (carModels.superSport.carSkid.max - carModels.superSport.carSkid.min) + carModels.superSport.carSkid.min).toFixed(2);
-            showCarByLevel(carModels.superSport, players[i].id);
-        }
+function generateSortCars(item) {
+    i = item;
+    console.log(item);
+    //for (let i = 0; i < players.length; i++) {
+    let whatIsTheCar = getRandomIntInclusive(1, 100);
+    if (whatIsTheCar <= 60) {
+        players[i].car.type = carModels.popular.type;
+        showCarByLevel(carModels.popular, players[i].id);
+    } else if (whatIsTheCar > 60 && whatIsTheCar <= 95) {
+        players[i].car.type = carModels.sport.type;
+        showCarByLevel(carModels.sport, players[i].id);
+    } else {
+        showCarByLevel(carModels.superSport, players[i].id);
     }
+    //}
 }
 
 function showCarByLevel(carType, playerId) {
