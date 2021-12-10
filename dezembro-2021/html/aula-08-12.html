@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<!--
+
+        v2 - Os amigos Pedro, Juca e Edna continuam trabalhando em seu joguinho de corrida e dessa 
+    vez eles resolveram incluir uma função de evolução dos carrinhos. 
+
+        Distribuição de pontos de experiência por corrida: 
+            a. Primeiro Lugar: 200 pontos; 
+            b. Segundo Lugar: 120 pontos; 
+            c. Terceiro Lugar: 50 pontos; 
+
+        Para que um carrinho passe de nível, são necessários 450 pontos. Cada vez que um carrinho 
+        passar de nível, adicione 1% da pontuação atual às velocidades Mínima e Máxima. O maior 
+        nível possível é 10. 
+
+    Ex.: Velocidade mínima de 150 + 1% = 151,5. 
+
+        Para a atualização do joguinho, os carrinhos de cada jogador devem ser armazenados em um
+        vetor de objetos. 
+
+        Adicione um botão para evoluir os carrinhos para cada jogador. O botão deve percorrer os 
+        carrinhos daquele jogador utilizando o método forEach() e executar as ações de atualização 
+        necessárias. 
+
+-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayoline.github.io/" />
+    <meta property="og:title" content="Anderson P. Soares" />
+    <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
+    <meta property="og:description" content="Exercício: JS - Corrida Super+, 08-12-21" />
+    <meta property="og:image" content="https://ayoline.github.io/dezembro-2021/images/aula-03-12/" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/aula-08-12.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1></h1>
+        <div id="entire-box">
+
+            <section id="section-left-in-entire-box">
+                <div id="titles-in-section-left">
+                    <h2></h2>
+                    <div id="players-in-section-left">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="main-board-in-section-left">
+                    <div id="board-players-in-main-board">
+                        <div id="pedro-box"></div>
+                        <div id="juca-box"></div>
+                        <div id="edna-box"></div>
+                    </div>
+
+                    <div id="board-result-in-main-board">
+                        <h2></h2>
+                        <p id="final-result"></p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="section-right-in-entire-box">
+                <button id="btn-start"></button>
+
+                <div id="modes-in-section-right">
+                    <input id="fast-mode" />
+                    <label></label>
+                    <input id="pro-mode" />
+                    <label></label>
+                    <input id="enduro-mode" />
+                    <label></label>
+                    <input id="custom-mode" />
+                    <input id="custom-mode-form"></input>
+                </div>
+
+                <div id="board-rules-in-section-right">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="../js/aula-08-12.js"></script>
+</body>
+
+</html>
