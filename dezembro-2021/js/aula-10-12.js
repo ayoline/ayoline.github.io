@@ -16,19 +16,15 @@ const btnSaveInvoice = document.querySelector('#btn-in-register-invoice');
 btnSaveInvoice.innerHTML = "Salvar";
 btnSaveInvoice.onclick = function () { saveInvoice() };
 
-document.querySelector('#name-in-board h3').innerHTML = "Nome";
-document.querySelector('#date-in-board h3').innerHTML = "Vencimento";
-document.querySelector('#value-in-board h3').innerHTML = "Valor";
-document.querySelector('#tax-in-board h3').innerHTML = "Juros(%)";
-document.querySelector('#tax-value-in-board h3').innerHTML = "Juros(R$)";
-document.querySelector('#total-value-in-board h3').innerHTML = "Total";
+loadFirstLineTable();
 
 const btnCalculateTax = document.querySelector('#btn-in-invoice-tables');
 btnCalculateTax.innerHTML = "Calcular juros"
 btnCalculateTax.onclick = function () { calculateInvoiceTax() };
 
 const invoicesList = [];
-const invoicesTax = [];
+const MORA = 2;
+const TAX_BY_DAY = 0.1;
 
 function saveInvoice() {
     if (inputName.value.length > 0 && inputDate.value.length > 0 && inputValue.value.length > 0) {
@@ -41,41 +37,65 @@ function saveInvoice() {
         element.totalValue = 0;
         invoicesList.push(element);
 
-        console.log(invoicesList);
-
-        const dd = String(element.date.getDate()).padStart(2, '0');
-        const mm = String(element.date.getMonth() + 1).padStart(2, '0');
-        const yyyy = element.date.getFullYear();
-        const dateFormated = dd + '/' + mm + '/' + yyyy;
+        const dateFormated = getFormatDate(element.date);
 
         document.querySelector('#name-in-board').innerHTML += `<p>${element.name}</p>`;
         document.querySelector('#date-in-board').innerHTML += `<p>${dateFormated}</p>`;
         document.querySelector('#value-in-board').innerHTML += `<p>R$ ${element.value}</p>`;
 
         cleanForms();
-
     } else {
         alert("Complete todos os campos!");
     }
 }
 
-function cleanForms() {
-    inputName.value = "";
-    inputDate.value = "";
-    inputValue.value = "";
+function getFormatDate(date) {
+    const dd = String(date.getDate()).padStart(2, '0');
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const yyyy = date.getFullYear();
+    const dateFormated = dd + '/' + mm + '/' + yyyy;
+    return dateFormated;
 }
 
 function calculateInvoiceTax() {
     const today = new Date();
     for (let i = 0; i < invoicesList.length; i++) {
         const invoiceDate = new Date(invoicesList[i].date);
-        const Difference_In_Time = today.getTime() - invoiceDate.getTime();
-        const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-        console.log(Difference_In_Days.toFixed(0));
+        const differenceInTime = today.getTime() - invoiceDate.getTime();
+        const differenceInDays = (differenceInTime / (1000 * 3600 * 24)).toFixed(0);
 
-        if (invoiceDate.getTime() === today.getTime()) {
-            console.log("true");
+        if (differenceInDays > 0 && invoicesList[i].totalValue == 0) {
+            let tax = MORA + (TAX_BY_DAY * differenceInDays);
+            let taxValue = (invoicesList[i].value * tax) / 100;
+
+            invoicesList[i].tax = tax;
+            invoicesList[i].taxValue = taxValue;
+            invoicesList[i].totalValue = parseFloat(taxValue) + parseFloat(invoicesList[i].value);
         }
-
     }
+
+    loadFirstLineTable();
+    invoicesList.map(function (element) {
+        document.querySelector('#name-in-board').innerHTML += `<p>${element.name}</p>`;
+        document.querySelector('#date-in-board').innerHTML += `<p>${getFormatDate(element.date)}</p>`;
+        document.querySelector('#value-in-board').innerHTML += `<p>R$ ${element.value}</p>`;
+        document.querySelector('#tax-in-board').innerHTML += `<p>${element.tax}%</p>`;
+        document.querySelector('#tax-value-in-board').innerHTML += `<p>R$ ${element.taxValue}</p>`;
+        document.querySelector('#total-value-in-board').innerHTML += `<p>R$ ${element.totalValue}</p>`;
+    })
+}
+
+function loadFirstLineTable() {
+    document.querySelector('#name-in-board').innerHTML = `<h3>Nome</h3>`;
+    document.querySelector('#date-in-board').innerHTML = `<h3>Vencimento</h3>`;
+    document.querySelector('#value-in-board').innerHTML = `<h3>Valor</h3>`;
+    document.querySelector('#tax-in-board').innerHTML = `<h3>Juros(%)</h3>`;
+    document.querySelector('#tax-value-in-board').innerHTML = `<h3>Juros(R$)</h3>`;
+    document.querySelector('#total-value-in-board').innerHTML = `<h3>Total</h3>`;
+}
+
+function cleanForms() {
+    inputName.value = "";
+    inputDate.value = "";
+    inputValue.value = "";
 }
