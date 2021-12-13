@@ -34,7 +34,7 @@ function saveInvoice() {
         element.value = inputValue.value;
         element.tax = 0;
         element.taxValue = 0;
-        element.totalValue = 0;
+        element.totalValue = inputValue.value;
         invoicesList.push(element);
 
         const dateFormated = getFormatDate(element.date);
@@ -64,7 +64,7 @@ function calculateInvoiceTax() {
         const differenceInTime = today.getTime() - invoiceDate.getTime();
         const differenceInDays = (differenceInTime / (1000 * 3600 * 24)).toFixed(0);
 
-        if (differenceInDays > 0 && invoicesList[i].totalValue == 0) {
+        if (differenceInDays > 0 && invoicesList[i].tax == 0) {
             let tax = MORA + (TAX_BY_DAY * differenceInDays);
             let taxValue = (invoicesList[i].value * tax) / 100;
 
