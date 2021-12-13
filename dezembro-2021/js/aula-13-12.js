@@ -16,6 +16,10 @@ const btnSaveInvoice = document.querySelector('#btn-in-register-invoice');
 btnSaveInvoice.innerHTML = "Salvar";
 btnSaveInvoice.onclick = function () { saveInvoice() };
 
+const btnOrderList = document.querySelector('#btn-order-list-in-invoice-tables');
+btnOrderList.innerHTML = "Ordenar Notas";
+btnOrderList.onclick = function () { orderList() };
+
 loadFirstLineTable();
 
 const btnCalculateTax = document.querySelector('#btn-in-invoice-tables');
@@ -37,7 +41,7 @@ function saveInvoice() {
         element.totalValue = inputValue.value;
         invoicesList.push(element);
 
-        const dateFormated = getFormatDate(element.date);
+        const dateFormated = getFormatedDate(element.date);
 
         document.querySelector('#name-in-board').innerHTML += `<p>${element.name}</p>`;
         document.querySelector('#date-in-board').innerHTML += `<p>${dateFormated}</p>`;
@@ -49,7 +53,7 @@ function saveInvoice() {
     }
 }
 
-function getFormatDate(date) {
+function getFormatedDate(date) {
     const dd = String(date.getDate()).padStart(2, '0');
     const mm = String(date.getMonth() + 1).padStart(2, '0');
     const yyyy = date.getFullYear();
@@ -75,9 +79,17 @@ function calculateInvoiceTax() {
     }
 
     loadFirstLineTable();
+    populateTableList();
+}
+
+function orderList() {
+
+}
+
+function populateTableList() {
     invoicesList.map(function (element) {
         document.querySelector('#name-in-board').innerHTML += `<p>${element.name}</p>`;
-        document.querySelector('#date-in-board').innerHTML += `<p>${getFormatDate(element.date)}</p>`;
+        document.querySelector('#date-in-board').innerHTML += `<p>${getFormatedDate(element.date)}</p>`;
         document.querySelector('#value-in-board').innerHTML += `<p>R$ ${element.value}</p>`;
         document.querySelector('#tax-in-board').innerHTML += `<p>${element.tax}%</p>`;
         document.querySelector('#tax-value-in-board').innerHTML += `<p>R$ ${element.taxValue}</p>`;
