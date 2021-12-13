@@ -31,7 +31,7 @@ function saveInvoice() {
         const element = {};
         element.name = inputName.value;
         element.date = new Date(inputDate.value);
-        element.value = inputValue.value;
+        element.value = parseFloat(inputValue.value).toFixed(2);
         element.tax = 0;
         element.taxValue = 0;
         element.totalValue = inputValue.value;
@@ -65,12 +65,12 @@ function calculateInvoiceTax() {
         const differenceInDays = (differenceInTime / (1000 * 3600 * 24)).toFixed(0);
 
         if (differenceInDays > 0 && invoicesList[i].tax == 0) {
-            let tax = MORA + (TAX_BY_DAY * differenceInDays);
-            let taxValue = (invoicesList[i].value * tax) / 100;
+            let tax = (MORA + (TAX_BY_DAY * differenceInDays)).toFixed(2);
+            let taxValue = ((invoicesList[i].value * tax) / 100).toFixed(2);
 
             invoicesList[i].tax = tax;
             invoicesList[i].taxValue = taxValue;
-            invoicesList[i].totalValue = parseFloat(taxValue) + parseFloat(invoicesList[i].value);
+            invoicesList[i].totalValue = (parseFloat(taxValue) + parseFloat(invoicesList[i].value)).toFixed(2);
         }
     }
 
