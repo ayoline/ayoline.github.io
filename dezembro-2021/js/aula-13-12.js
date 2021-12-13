@@ -30,6 +30,9 @@ const btnCalculateTax = document.querySelector('#btn-in-invoice-tables');
 btnCalculateTax.innerHTML = "Calcular juros"
 btnCalculateTax.onclick = function () { calculateInvoiceTax() };
 
+const sumTotalValue = document.querySelector('#buttons-in-invoice-tables p');
+sumTotalValue.innerHTML = `<p style="color: #3476FB; font-weight: bold;">Valor total das notas:</p>`;
+
 const invoicesList = [];
 let invoiceOrderListByDate = [];
 let invoiceOrderListByName = [];
@@ -44,7 +47,7 @@ function saveInvoice() {
         element.value = parseFloat(inputValue.value).toFixed(2);
         element.tax = 0;
         element.taxValue = 0;
-        element.totalValue = inputValue.value;
+        element.totalValue = parseFloat(inputValue.value).toFixed(2);
         invoicesList.push(element);
 
         const dateFormated = getFormatedDate(element.date);
@@ -86,6 +89,17 @@ function calculateInvoiceTax() {
 
     loadFirstLineTable();
     populateTableList(invoicesList);
+
+    sumTotal(invoicesList);
+}
+
+function sumTotal(el) {
+    var initValue = 0;
+    var sum = el.reduce(function (accumulator, currentValue) {
+        return (parseFloat(accumulator) + parseFloat(currentValue.totalValue)).toFixed(2);
+    }, initValue)
+
+    sumTotalValue.innerHTML = `<p style="color: #3476FB;  font-weight: bold;">Valor total das notas: ${sum}</p>`;
 }
 
 function orderListByDate(element) {
