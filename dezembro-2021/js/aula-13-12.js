@@ -16,9 +16,13 @@ const btnSaveInvoice = document.querySelector('#btn-in-register-invoice');
 btnSaveInvoice.innerHTML = "Salvar";
 btnSaveInvoice.onclick = function () { saveInvoice() };
 
-const btnOrderList = document.querySelector('#btn-order-list-in-invoice-tables');
-btnOrderList.innerHTML = "Ordenar Notas";
-btnOrderList.onclick = function () { orderList() };
+const btnOrderByDate = document.querySelector('#btn-order-list-date-in-invoice-tables');
+btnOrderByDate.innerHTML = "Ordenar por Data";
+btnOrderByDate.onclick = function () { orderListByDate(invoicesList) };
+
+const btnOrderByName = document.querySelector('#btn-order-list-name-in-invoice-tables');
+btnOrderByName.innerHTML = "Ordernar por nome";
+btnOrderByName.onclick = function () { orderListByName(invoicesList) };
 
 loadFirstLineTable();
 
@@ -27,6 +31,8 @@ btnCalculateTax.innerHTML = "Calcular juros"
 btnCalculateTax.onclick = function () { calculateInvoiceTax() };
 
 const invoicesList = [];
+let invoiceOrderListByDate = [];
+let invoiceOrderListByName = [];
 const MORA = 2;
 const TAX_BY_DAY = 0.1;
 
@@ -79,15 +85,37 @@ function calculateInvoiceTax() {
     }
 
     loadFirstLineTable();
-    populateTableList();
+    populateTableList(invoicesList);
 }
 
-function orderList() {
-
+function orderListByDate(element) {
+    invoiceOrderListByDate = element.sort(function (a, b) {
+        return new Date(b.date) - new Date(a.date);
+    });
+    loadFirstLineTable();
+    populateTableList(invoiceOrderListByDate);
 }
 
-function populateTableList() {
-    invoicesList.map(function (element) {
+function orderListByName(element) {
+    function compare(a, b) {
+        const nameA = a.name.toUpperCase();
+        const nameB = b.name.toUpperCase();
+
+        let comparison = 0;
+        if (nameA > nameB) {
+            comparison = 1;
+        } else if (nameA < nameB) {
+            comparison = -1;
+        }
+        return comparison;
+    }
+    invoiceOrderListByName = element.sort(compare);
+    loadFirstLineTable();
+    populateTableList(invoiceOrderListByName);
+}
+
+function populateTableList(list) {
+    list.map(function (element) {
         document.querySelector('#name-in-board').innerHTML += `<p>${element.name}</p>`;
         document.querySelector('#date-in-board').innerHTML += `<p>${getFormatedDate(element.date)}</p>`;
         document.querySelector('#value-in-board').innerHTML += `<p>R$ ${element.value}</p>`;
