@@ -94,8 +94,8 @@ function calculateInvoiceTax() {
 }
 
 function sumTotal(el) {
-    var initValue = 0;
-    var sum = el.reduce(function (accumulator, currentValue) {
+    const initValue = 0;
+    const sum = el.reduce(function (accumulator, currentValue) {
         return (parseFloat(accumulator) + parseFloat(currentValue.totalValue)).toFixed(2);
     }, initValue)
 
