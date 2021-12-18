@@ -30,6 +30,29 @@ const btnCalculateTax = document.querySelector('#btn-in-invoice-tables');
 btnCalculateTax.innerHTML = "Calcular juros"
 btnCalculateTax.onclick = function () { calculateInvoiceTax() };
 
+const btnFilter = document.querySelector('#btn-filter-in-invoice-tables');
+btnFilter.innerHTML = "Filtrar";
+btnFilter.onclick = function () { showFilter() };
+
+const filterForms = document.querySelector('#filter-forms');
+const bkgFilterForms = document.querySelector('#background-filter-forms');
+
+const btnCloseFilterForms = document.querySelector('#btn-in-close-filter-forms');
+btnCloseFilterForms.innerHTML = "X";
+btnCloseFilterForms.onclick = function () { closeFilterForms() }
+
+const inputInitialDate = document.querySelector('#input-initial-date-in-filter-forms');
+const inputFinalDate = document.querySelector('#input-final-date-in-filter-forms');
+const btnFilterByDate = document.querySelector('#btn-filter-by-date');
+btnFilterByDate.innerHTML = "Por data";
+btnFilterByDate.onclick = function () { showListfilterByDate() };
+
+const inputInitialValue = document.querySelector('#input-initial-value-in-filter-forms');
+const inputFinalValue = document.querySelector('#input-final-value-in-filter-forms')
+const btnFilterByValue = document.querySelector('#btn-filter-by-value');
+btnFilterByValue.innerHTML = "Por valor";
+btnFilterByValue.onclick = function () { showListfilterByValue() };
+
 const sumTotalValue = document.querySelector('#buttons-in-invoice-tables p');
 sumTotalValue.innerHTML = `<p style="color: #3476FB; font-weight: bold;">Valor total das notas:</p>`;
 
@@ -39,11 +62,68 @@ let invoiceOrderListByName = [];
 const MORA = 2;
 const TAX_BY_DAY = 0.1;
 
+function showListfilterByDate() {
+    if (inputInitialDate.value.length > 0 && inputFinalDate.value.length > 0) {
+        const invoiceFilteredByDate = invoicesList.filter(filterByDate);
+        loadFirstLineTable();
+        populateTableList(invoiceFilteredByDate);
+        sumTotal(invoiceFilteredByDate);
+        closeFilterForms();
+    } else {
+        alert("Insira uma data inicial e final");
+    }
+}
+
+function filterByDate(el) {
+    const initialDate = new Date(inputInitialDate.value);
+    initialDate.setDate(initialDate.getDate() + 1);
+    const finalDate = new Date(inputFinalDate.value);
+    finalDate.setDate(finalDate.getDate() + 1);
+    if (el.date >= initialDate && el.date <= finalDate) {
+        return el.date;
+    }
+}
+
+function showListfilterByValue() {
+    if (inputInitialValue.value.length > 0 && inputFinalValue.value > inputInitialValue.value) {
+        const invoiceFilteredByValue = invoicesList.filter(filterByValue);
+        loadFirstLineTable();
+        populateTableList(invoiceFilteredByValue);
+        sumTotal(invoiceFilteredByValue);
+        closeFilterForms();
+    } else {
+        alert("Insira um valor inicial e final válido");
+    }
+}
+
+function filterByValue(el) {
+    const initialValue = parseFloat(inputInitialValue.value).toFixed(2);
+    const finalValue = parseFloat(inputFinalValue.value).toFixed(2);
+    if (el.value >= initialValue && el.value <= finalValue) {
+        return el.value;
+    }
+}
+
+function showFilter() {
+    //filterForms.innerHTML = `<h1>Filtrar</h1>`;
+    //filterForms.innerHTML = `<input id="input-name-in-register" />`
+
+    bkgFilterForms.style.display = "block";
+    bkgFilterForms.style.visibility = "visible";
+    bkgFilterForms.style.opacity = "1";
+}
+
+function closeFilterForms() {
+    bkgFilterForms.style.visibility = "hidden";
+    bkgFilterForms.style.opacity = "0";
+}
+
 function saveInvoice() {
     if (inputName.value.length > 0 && inputDate.value.length > 0 && inputValue.value.length > 0) {
         const element = {};
         element.name = inputName.value;
         element.date = new Date(inputDate.value);
+        element.date.setDate(element.date.getDate() + 1); // fix to right date
         element.value = parseFloat(inputValue.value).toFixed(2);
         element.tax = 0;
         element.taxValue = 0;
@@ -66,7 +146,7 @@ function getFormatedDate(date) {
     const dd = String(date.getDate()).padStart(2, '0');
     const mm = String(date.getMonth() + 1).padStart(2, '0');
     const yyyy = date.getFullYear();
-    const dateFormated = dd + '/' + mm + '/' + yyyy;
+    const dateFormated = (dd) + '/' + mm + '/' + yyyy;
     return dateFormated;
 }
 
