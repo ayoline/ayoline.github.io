@@ -6,10 +6,15 @@ btnStart.innerHTML = "Começar!";
 
 btnStart.onclick = function () {
     numbers = [];
+    let i = 0;
     removeAllChildNodes(lotteryNumbers);
-    let timerId = setInterval(() => generate(1, 60), 1000);
-    setTimeout(() => { clearInterval(timerId); }, 6000);
-};
+
+    let timerId = setInterval(function () {
+        generate(1, 60);
+        i++;
+        if (i == 6) clearInterval(timerId);
+    }, 1000);
+}
 
 let numbers = [];
 let add = true;
