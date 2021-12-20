@@ -63,14 +63,14 @@ const MORA = 2;
 const TAX_BY_DAY = 0.1;
 
 function showListfilterByDate() {
-    if (inputInitialDate.value.length > 0 && inputFinalDate.value.length > 0) {
+    if (inputInitialDate.value.length > 0 && inputFinalDate.value > inputInitialDate.value) {
         const invoiceFilteredByDate = invoicesList.filter(filterByDate);
         loadFirstLineTable();
         populateTableList(invoiceFilteredByDate);
         sumTotal(invoiceFilteredByDate);
         closeFilterForms();
     } else {
-        alert("Insira uma data inicial e final");
+        alert("Insira uma data inicial e final válida");
     }
 }
 
@@ -105,9 +105,6 @@ function filterByValue(el) {
 }
 
 function showFilter() {
-    //filterForms.innerHTML = `<h1>Filtrar</h1>`;
-    //filterForms.innerHTML = `<input id="input-name-in-register" />`
-
     bkgFilterForms.style.display = "block";
     bkgFilterForms.style.visibility = "visible";
     bkgFilterForms.style.opacity = "1";
