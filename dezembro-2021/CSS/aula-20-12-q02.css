@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    color: #747576;
+    background-color: #FFFFFF;;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1920px;
+    max-height: 1080px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: 0%;
+}
+
+main{
+    background-color: #E8ECEF;
+    box-shadow: 3px 3px 10px #2B2D42;
+    width: 70%;
+    height: 50%;
+    max-width: 1532px;
+    max-height: 972px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 0px;
+    margin: auto;
+}
+
+main section{
+    font-weight: bold;
+    font-size: 2rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btn-start{
+    color: white;
+    background-color: #3476FB;
+    width: 20%;
+    height: 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 0px;
+    margin-inline: auto;
+    border-radius: 5px;
+}
+
+#lottery-numbers{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 5%;
+}
+
+#lottery-numbers h1{
+    color: blue;
+    align-self: center;
+    margin-right: 50px;
+}
