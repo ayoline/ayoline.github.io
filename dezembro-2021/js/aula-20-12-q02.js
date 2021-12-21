@@ -13,7 +13,7 @@ btnStart.onclick = function () {
         generateLotteryNumber(1, 60);
         i++;
         if (i == 6) clearInterval(timerId);
-    }, 1000);
+    }, 10);
 }
 
 let numbers = [];
@@ -35,7 +35,7 @@ function generateLotteryNumber(lowest, highest) {
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.ceil(Math.random() * (max - min + 1));
 }
 
 function removeAllChildNodes(parent) {
