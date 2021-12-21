@@ -10,7 +10,7 @@ btnStart.onclick = function () {
     removeAllChildNodes(lotteryNumbers);
 
     let timerId = setInterval(function () {
-        generate(1, 60);
+        generateLotteryNumber(1, 60);
         i++;
         if (i == 6) clearInterval(timerId);
     }, 1000);
@@ -19,7 +19,7 @@ btnStart.onclick = function () {
 let numbers = [];
 let add = true;
 
-function generate(lowest, highest) {
+function generateLotteryNumber(lowest, highest) {
     do {
         add = true;
         let randomNumber = getRandomIntInclusive(lowest, highest);
