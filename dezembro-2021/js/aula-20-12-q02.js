@@ -23,12 +23,9 @@ function generateLotteryNumber(lowest, highest) {
     do {
         add = true;
         let randomNumber = getRandomIntInclusive(lowest, highest);
-        for (let i = 0; i < highest; i++) {
-            if (numbers[i] == randomNumber) {
-                add = false;
-            }
-        }
-        if (add) {
+        if (numbers.includes(randomNumber)) {
+            add = false;
+        } else if (add) {
             numbers.push(randomNumber);
             lotteryNumbers.innerHTML += `<h1>${randomNumber}</h1>`;
         }
