@@ -23,7 +23,7 @@ function generateLotteryNumber(lowest, highest) {
     do {
         add = true;
         let randomNumber = getRandomIntInclusive(lowest, highest);
-        for (var i = 0; i < highest; i++) {
+        for (let i = 0; i < highest; i++) {
             if (numbers[i] == randomNumber) {
                 add = false;
             }
