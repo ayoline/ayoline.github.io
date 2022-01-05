@@ -13,32 +13,39 @@ console.log(multiplyBy5(7));
 
 
 // Exercicio 2
-let history = document.querySelector('#history').style.fontSize;
 
 const btnBigger = document.querySelector("#btn-bigger");
 btnBigger.onclick = function () {
-    zoom(1);
+    z.zoomIn();
 }
 
 const btnSmaller = document.querySelector("#btn-smaller");
 btnSmaller.onclick = function () {
-    zoom();
+    z.zoomOut();
 }
 
-function createMultiplier(n) {
-    return function (x) {
-        return x * n;
-    };
-}
-counter = 15;
+let history = document.getElementById('history');
 
-function zoom(n) {
-    function plus() { counter += 1; }
-    function down() { counter -= 1; }
-    if (n == 1) {
-        plus();
-    } else {
-        down();
+const zoomInOut = (initialRem) => {
+    let rem = initialRem;
+
+    function zoomIn() {
+        rem *= 1.05;
+        rerender(rem);
     }
-    document.querySelector('#history').style.fontSize = counter + "px";
-}
+    function zoomOut() {
+        rem *= 0.95;
+        rerender(rem);
+    }
+
+    return { zoomIn, zoomOut };
+};
+
+const rerender = (rem) => {
+    history.setAttribute(
+        'style',
+        `font-size: ${rem}rem; line-height: ${rem * 1.5}rem;`
+    );
+};
+
+const z = zoomInOut(1.2);

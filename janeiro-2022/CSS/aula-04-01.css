@@ -24,7 +24,7 @@ main{
     background-color: #E8ECEF;
     box-shadow: 3px 3px 10px #2B2D42;
     width: 90%;
-    height: 90%;
+    height: fit-content;
     max-width: 1532px;
     max-height: 972px;
     display: flex;
@@ -33,6 +33,7 @@ main{
     border-radius: 10px;
     border: 0px;
     padding: 1%;
+    margin-bottom: 5%;
     margin: auto;
 }
 
