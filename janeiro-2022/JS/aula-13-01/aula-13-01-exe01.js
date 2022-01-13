@@ -10,7 +10,6 @@ no console todos os dados que a compõe.
 
 // Exercício 1
 function factorial(el) {
-
     if (el < 0 || !Number.isInteger(el)) {
         return `Número é menor que zero: ${el}`;
     } else if (el === 0) {
