@@ -3,9 +3,9 @@
 // Utilize o spread operator combinado com a biblioteca “Math” para escrever seu
 // código.
 
-let arrayOfRandomNumbers = [];
-
 function getHighestNumber() {
+    let arrayOfRandomNumbers = [];
+
     for (let i = 0; i < 10; i++) {
         do {
             add = true;
