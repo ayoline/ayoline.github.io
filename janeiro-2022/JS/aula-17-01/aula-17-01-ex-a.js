@@ -1,3 +1,9 @@
+// Exercícios:
+// 1. Baseado nos seus aprendizados crie códigos javascript para exemplificar os seguintes 
+// conceitos: 
+// a. Crie uma função capaz de receber infinitos parâmetros e arranjá-los em um único 
+// array.
+
 function ShowArgs(..._theArgs) {
     return _theArgs;
 }
