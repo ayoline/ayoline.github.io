@@ -4,6 +4,6 @@
 
 const arrayNumbers = [2, 3, 4, 5];
 
-function spreadMultiplier(p1, p2, p3, p4) { return p1 * p2 * p3 * p4; }
+function spreadMultiplier(_p1, _p2, _p3, _p4) { return _p1 * _p2 * _p3 * _p4; }
 
 console.log(spreadMultiplier(...arrayNumbers));

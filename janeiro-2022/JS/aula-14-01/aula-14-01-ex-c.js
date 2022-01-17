@@ -22,10 +22,10 @@ function getHighestNumber() {
     return `The highest Number of the array [${arrayOfRandomNumbers}], is ${highestNumber}`;
 }
 
-function getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.ceil(Math.random() * (max - min + 1));
+function getRandomNumber(_min, _max) {
+    _min = Math.ceil(_min);
+    _max = Math.floor(_max);
+    return Math.ceil(Math.random() * (_max - _min + 1));
 }
 
 console.log(getHighestNumber());
