@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!--
+    Exercícios:
+
+    1. Criar uma classe ‘Calculadora’ que possua os seguintes atributos e métodos:
+    a. Atributos:
+        i. operand1;
+        ii. operand2;
+        iii. operation.
+    b. Métodos:
+        i. setOperand1(_operand1): responsável por definir o primeiro operando;
+        ii. setOperand2(_operand2): responsável por definir o segundo operando;
+        iii. setOperation(_operation): responsável por definir o tipo de operação 
+        (‘soma’, ‘subtracao’, ‘divisao’, ‘multiplicacao’);
+        iv. getResult(): retorna o resultado da operação se possível ou erro caso 
+        contrário (informar o erro da operação);
+        v. clearCalculator(): retorna os valores padrão para ‘operand1’, ‘operand2’, 
+        ‘operation’
+
+    2. Criar uma página que utilize a classe ‘Calculadora’ e permita ao usuário fazer as 4 operações 
+    básicas de matemática clicando nos botões ‘0’, ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, ‘6’, ‘7’, ‘8’, ‘9’, ‘+’, ‘-‘, ‘x’, 
+    ‘/’, ‘=’.
+-->
+
+<html>
+
+<head>
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayoline.github.io/" />
+    <meta property="og:title" content="Anderson P. Soares" />
+    <meta property="og:site_name" content="AndersonPS - GitPages - Repository" />
+    <meta property="og:description" content="Exercício: - JS - calculadora+, 25-01-22" />
+    <meta property="og:image" content="https://ayoline.github.io/novembro-2021/images/aula-24-11/" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator-grid">
+        <div class="output">
+            <div id="data-previous-operand" class="previous-operand"></div>
+            <div id="data-current-operand" class="current-operand"></div>
+        </div>
+        <button id="data-all-clear" class="span-two">AC</button>
+        <button id="data-delete">DEL</button>
+        <button class="data-operation">÷</button>
+        <button class="data-number">1</button>
+        <button class="data-number">2</button>
+        <button class="data-number">3</button>
+        <button class="data-operation">*</button>
+        <button class="data-number">4</button>
+        <button class="data-number">5</button>
+        <button class="data-number">6</button>
+        <button class="data-operation">+</button>
+        <button class="data-number">7</button>
+        <button class="data-number">8</button>
+        <button class="data-number">9</button>
+        <button class="data-operation">-</button>
+        <button class="data-number">.</button>
+        <button class="data-number">0</button>
+        <button id="data-equals" class="span-two">=</button>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
