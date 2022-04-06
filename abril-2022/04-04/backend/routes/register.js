@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const bcrypt = require('bcryptjs');
+const cryptoJS = require("crypto-js");
 router.use(express.json());
 
-router.post('/register', function (req, res) {
+router.post('/register', async (req, res) => {
     const userData = req.body;
     if (!userData.name || !userData.password) return res.send({ error: 'Username or password not informed!' });
 
@@ -11,6 +13,14 @@ router.post('/register', function (req, res) {
     const userFromJson = jsonUsers.find((el) => el.name === userData.name);
 
     if (userFromJson) return res.send({ error: 'User already exists!' });
+
+    // Hash password
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+    // Encrypt
+    const cipherPassword = cryptoJS.AES.encrypt(hashedPassword, 'S3gr3d0').toString();
+
+    userData.password = cipherPassword;
 
     jsonUsers.push(userData);
     fs.writeFile('data/users.json', JSON.stringify(jsonUsers), function (err) {

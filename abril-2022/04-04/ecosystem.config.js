@@ -4,13 +4,13 @@ module.exports = {
             script: 'app.js',
             cwd: 'backend/',
             name: 'app',
-            watch: true
+            watch: false
         },
         {
             script: 'server.js',
             cwd: 'frontend/',
             name: 'server',
-            watch: true
+            watch: false
         }
     ]
 }
