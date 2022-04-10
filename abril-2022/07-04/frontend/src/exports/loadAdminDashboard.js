@@ -1,58 +1,6 @@
 const apiUrl = 'http://localhost:3000';
 
-import login from './exports/login.js';
-import getCookies from './exports/getCookies.js';
-
-const inputUserName = document.querySelector('#input-username');
-const inputPassword = document.querySelector('#input-password');
-
-getCookies();
-
-loadAdminDashboard();
-
-const btnLogin = document.querySelector('#btn-login');
-btnLogin.onclick = function () {
-    const userObj = {};
-    userObj.username = inputUserName.value;
-    userObj.password = inputPassword.value;
-
-    login(userObj);
-
-    inputUserName.value = '';
-    inputPassword.value = '';
-}
-
-const btnRegister = document.querySelector('#btn-register');
-btnRegister.onclick = function () {
-    location.href = '/register/index.html';
-}
-
-function deleteEventByID(_eventToBeDeleted) {
-    const id = _eventToBeDeleted;
-
-    const requestOptions = {
-        method: 'DELETE',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'http://localhost:3001',
-            'Access-Control-Allow-Credentials': true
-        },
-        credentials: 'include',
-        body: JSON.stringify({ id: id })
-    };
-
-    fetch(apiUrl + '/delete/deletedata', requestOptions).then(resp => resp.text()).then(el => {
-        el = JSON.parse(el);
-        if (!el.error) {
-            //alert(`Event ${el.title} has been deleted!`);
-            console.log('del')
-            loadTableOrderById();
-        } else {
-            console.log(el.error);
-        }
-    });
-}
+import deleteEventByID from './deleteEventByID.js';
 
 function loadAdminDashboard() {
     document.querySelector('#table-in-table-box').innerHTML = `<H1>Admin Dashboard</h1>`;
@@ -110,3 +58,5 @@ function loadFirstLineTable() {
     </tr>
     `;
 }
+
+export default loadAdminDashboard;
