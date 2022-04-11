@@ -1,7 +1,8 @@
-import loadTableOrderById from './loadAdminDashboard';
+const apiUrl = 'http://localhost:3000';
+
+import loadTableOrderById from './loadAdminDashboard.js';
 
 const deleteEventByID = (_eventToBeDeleted) => {
-    const apiUrl = 'http://localhost:3000';
     const id = _eventToBeDeleted;
 
     const requestOptions = {
@@ -19,7 +20,8 @@ const deleteEventByID = (_eventToBeDeleted) => {
     fetch(apiUrl + '/delete/deletedata', requestOptions).then(resp => resp.text()).then(el => {
         el = JSON.parse(el);
         if (!el.error) {
-            alert(`Game ${el.game} has been deleted!`);
+            //alert(`Event ${el.title} has been deleted!`);
+            console.log('del')
             loadTableOrderById();
         } else {
             console.log(el.error);

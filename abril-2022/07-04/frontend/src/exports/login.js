@@ -1,7 +1,8 @@
 import getCookies from './getCookies.js';
 
-const login = (_userData) => {
-    const apiUrl = 'http://localhost:3000';
+const apiUrl = 'http://localhost:3000';
+
+const login = async (_userData) => {
 
     const requestOptions = {
         method: 'POST',
@@ -15,7 +16,7 @@ const login = (_userData) => {
         body: JSON.stringify(_userData)
     };
 
-    fetch(apiUrl + '/auth/login', requestOptions).then(resp => resp.text()).then(el => {
+    await fetch(apiUrl + '/auth/login', requestOptions).then(resp => resp.text()).then(el => {
         el = JSON.parse(el);
 
         if (!el.error) {

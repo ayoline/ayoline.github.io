@@ -1,8 +1,9 @@
+import loadUserDashboard from './loadUserDashboard.js';
+import loadAdminDashboard from './loadAdminDashboard.js'
+
 const apiUrl = 'http://localhost:3000';
 
-const getCookies = () => {
-    const welcomeMsg = document.querySelector('#session-authorized');
-
+const logAdminOrUser = () => {
     const requestOptions = {
         method: 'GET',
         headers: {
@@ -18,13 +19,15 @@ const getCookies = () => {
         el = JSON.parse(el);
 
         if (!el.error) {
-            welcomeMsg.style.display = "flex";
-            welcomeMsg.innerHTML = `Olá, ${el.success}`
-            console.log(el.success);
+            if (el.userpermission === '0') {
+                loadUserDashboard();
+            } else if (el.userpermission === '1') {
+                loadAdminDashboard();
+            }
         } else {
             console.log(el.error);
         }
     });
 }
 
-export default getCookies;
+export default logAdminOrUser;

@@ -1,7 +1,8 @@
 import login from './login.js';
 
+const apiUrl = 'http://localhost:3000';
+
 const register = (_userData) => {
-    const apiUrl = 'http://localhost:3000';
 
     const requestOptions = {
         method: 'POST',
@@ -19,9 +20,9 @@ const register = (_userData) => {
         el = JSON.parse(el);
 
         if (!el.error) {
-            alert(el.success);
             location.href = '../index.html';
             login(_userData);
+            alert(el.success);
         } else {
             alert(el.error);
         }
