@@ -1,23 +1,33 @@
 [
     {
-        "id": 1,
-        "title": "show1",
-        "description": "churrasco do samir",
-        "date": "01-10-2023",
-        "time": "15h"
+        "title": "teste1",
+        "description": "teste1",
+        "date": "sadad",
+        "time": "adasd",
+        "inside": [
+            "w"
+        ],
+        "id": 7
     },
     {
-        "id": 2,
-        "title": "show2",
-        "description": "churrasco do samir",
-        "date": "01-10-2023",
-        "time": "15h"
+        "title": "teste2",
+        "description": "dasdsa",
+        "date": "dasdasd",
+        "time": "asdasd",
+        "inside": [
+            "w"
+        ],
+        "id": 8
     },
     {
-        "id": 3,
-        "title": "show2",
-        "description": "churrasco do samir",
-        "date": "01-10-2023",
-        "time": "15h"
+        "title": "teste3",
+        "description": "dasdads",
+        "date": "adasdasd",
+        "time": "asdasd",
+        "inside": [
+            "w",
+            "aaa"
+        ],
+        "id": 9
     }
 ]

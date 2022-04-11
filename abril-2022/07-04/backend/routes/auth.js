@@ -60,7 +60,10 @@ router.get('/getcookie', function (req, res) {
 
             if (userFromJson) {
                 console.log('Session ID exists');
-                return res.send({ success: userFromJson.fullname });
+                return res.send({
+                    success: userFromJson.fullname,
+                    userpermission: userFromJson.userpermission
+                });
             } else res.status(403).send({ error: 'Not Authenticated' });
         } catch (error) {
             console.log(error);

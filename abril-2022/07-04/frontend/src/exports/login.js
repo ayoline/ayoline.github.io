@@ -19,6 +19,7 @@ const login = (_userData) => {
         el = JSON.parse(el);
 
         if (!el.error) {
+            location.reload();
             alert(el.success);
             getCookies();
         } else {

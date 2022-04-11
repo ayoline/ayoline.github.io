@@ -58,7 +58,6 @@ p {
     align-self: center;
     flex-direction: column;
     justify-content: flex-start;
-    border: dashed;
 }
 
 #table-in-table-box {
@@ -71,12 +70,22 @@ p {
     overflow-y: auto;
     flex-direction: column;
     margin-top: 0;
-    border: dashed;
+}
+
+#qr-bar {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#qr-bar input {
+    width: 70%;
 }
 
 #table {
     width: 100%;
-    border: dashed;
 }
 
 th,
@@ -95,4 +104,120 @@ th {
     height: fit-content;
     justify-content: center;
     display: none;
+}
+
+#add-event-forms {
+    width: 50vw;
+    height: fit-content;
+    max-width: 766px;
+    max-height: 486px;
+    background-color: white;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s ease;
+    top: 0px;
+    left: 25vw;
+}
+
+#add-forms {
+    width: 100%;
+    height: 100%;
+    background-color: #EDF2F4;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #2B2D42;
+    margin-top: 2%;
+    border: thick #8D99AE;
+    margin-inline: auto;
+}
+
+#add-forms h3 {
+    margin-top: 0%;
+}
+
+#add-forms input {
+    width: 25%;
+    margin: 2%;
+}
+
+#add-forms button {
+    color: white;
+    background-color: #3476FB;
+    width: 20%;
+    height: 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    align-self: baseline;
+    border: 0px;
+    border-radius: 5px;
+}
+
+#close-add-forms {
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: flex-end;
+    color: red;
+    padding: 0px;
+    margin-right: 2%;
+    margin-bottom: 0px;
+}
+
+#btn-in-close-add-forms:hover {
+    cursor: pointer;
+}
+
+.inputs-in-add-event-forms {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding: 0px;
+    flex-direction: row;
+    justify-content: left;
+    vertical-align: bottom;
+}
+
+.inputs-in-add-event-forms input {
+    height: fit-content;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+}
+
+.inputs-in-add-event-forms label {
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0%;
+}
+
+#qr-code {
+    width: fit-content;
+    height: fit-content;
+    max-width: 766px;
+    max-height: 486px;
+    background-color: white;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s ease;
+    top: 40vh;
+    left: 40vw;
+}
+
+#btn-in-close-qr-modal {
+    cursor: pointer;
+}
+
+#close-qr-modal {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    color: red;
+    padding: 0px;
+    margin-right: 2%;
+    margin-bottom: 0px;
 }
