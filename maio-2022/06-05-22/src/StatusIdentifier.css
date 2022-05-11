@@ -1,0 +1,22 @@
+.character-image-container {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-image {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.dead>img {
+    filter: grayscale(100%);
+}

@@ -1,0 +1,11 @@
+.alive-text {
+    color: #00ff00;
+}
+
+.dead-text {
+    color: #ff0000;
+}
+
+.unknown-text {
+    color: rgb(138, 138, 138);
+}
